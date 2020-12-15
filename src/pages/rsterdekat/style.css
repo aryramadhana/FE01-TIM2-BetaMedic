@@ -1,0 +1,34 @@
+.top-wrapper-rs {
+  background-image: url('../../assets/images/bg-rs.jpg');
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.top-wrapper-rs h1 {
+  font-size: 50px;
+  text-align: center;
+  margin: 20px;
+}
+
+.top-wrapper-rs p {
+  text-align: center;
+  font-size: 20px;
+}
+
+.top-wrapper-rs {
+  margin: 0 auto;
+}
+
+.top-wrapper-rs .mdb-datatable {
+  width: 80%;
+  margin: 0 auto;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 10px;
+  box-shadow: 0 0.15rem 1.75rem 0 rgba(31, 45, 65, 0.15);
+  padding: 20px;
+}
+
+.mdb-datatable-filter input {
+  /* width: 100% !important; */
+  border-radius: 10px;
+}

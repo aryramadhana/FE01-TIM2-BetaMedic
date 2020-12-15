@@ -3,8 +3,14 @@ import { Link } from 'react-router-dom';
 /* eslint-disable eol-last */
 
 const Header = () => {
-  const listMenu = ['Beranda', 'Cek Covid', 'Tanya Dokter',
-  'Booking Tes Covid', 'RS Terdekat', 'Login'];
+  const listMenu = [
+    'Beranda',
+    'Cek Covid',
+    'Tanya Dokter',
+    'Booking Tes Covid',
+    'RsTerdekat',
+    'Login',
+  ];
   return (
     <div className="header">
       {listMenu.map((name) => {
