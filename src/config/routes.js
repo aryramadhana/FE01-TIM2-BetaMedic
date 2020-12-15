@@ -1,11 +1,16 @@
-// import { Home } from '../pages';
+import { Home, RsTerdekat } from '../pages';
 
 const routes = [
-  // {
-  //   path: '/',
-  //   component: Home,
-  //   isPublic: true,
-  // },
+  {
+    path: '/RsTerdekat',
+    component: RsTerdekat,
+    isPublic: true,
+  },
+  {
+    path: '/',
+    component: Home,
+    isPublic: true,
+  },
 ];
 
 export default routes;

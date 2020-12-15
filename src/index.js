@@ -1,6 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
+import '@fortawesome/fontawesome-free/css/all.min.css'; // eslint-disable-line import/no-extraneous-dependencies
+import 'bootstrap-css-only/css/bootstrap.min.css'; // eslint-disable-line import/no-extraneous-dependencies
+import 'mdbreact/dist/css/mdb.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 

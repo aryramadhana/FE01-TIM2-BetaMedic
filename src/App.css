@@ -1,3 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla&display=swap');
+
+body {
+  font-family: 'Karla', sans-serif;
+}
+
 .App {
   text-align: center;
 }
@@ -24,6 +30,10 @@
   color: white;
 }
 
+.header {
+  background-color: #007bff;
+}
+
 .App-link {
   color: #61dafb;
 }
@@ -35,4 +45,15 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.menu {
+  display: inline-block;
+  padding: 20px;
+  color: white;
+}
+
+.menu:hover {
+  background-color: white;
+  color: green;
 }

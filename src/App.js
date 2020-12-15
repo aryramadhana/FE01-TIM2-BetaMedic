@@ -1,9 +1,12 @@
 /* eslint-disable react/jsx-props-no-spreading */
+/* eslint-disable import/prefer-default-export */
 import React from 'react';
 import './App.css';
 import { Route, Switch, BrowserRouter, Redirect } from 'react-router-dom';
 import routes from './config/routes';
+import { HeaderNav, Footer } from './components';
 import { isUserAuthenticated } from './utils/cookie';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 const PrivateRoute = ({ component: Component, ...rest }) => {
   return (
@@ -22,6 +25,7 @@ const PrivateRoute = ({ component: Component, ...rest }) => {
 const App = () => {
   return (
     <BrowserRouter>
+      <HeaderNav />
       <Switch>
         {routes.map((route) => {
           if (route.isPublic) {
@@ -42,6 +46,7 @@ const App = () => {
           );
         })}
       </Switch>
+      <Footer />
     </BrowserRouter>
   );
 };
