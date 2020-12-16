@@ -1,4 +1,4 @@
-import { Home, BookingTesCovid, RsTerdekat } from '../pages';
+import { Home, BookingTesCovid, RegistrasiBooking, RsTerdekat } from '../pages';
 
 const routes = [
   {
@@ -7,7 +7,12 @@ const routes = [
     isPublic: true,
   },
   {
-    path: '/RsTerdekat',
+    path: '/RegistrasiBooking',
+    component: RegistrasiBooking,
+    isPublic: true,
+  },
+  {
+    path: '/Rs Terdekat',
     component: RsTerdekat,
     isPublic: true,
   },
