@@ -8,7 +8,7 @@ const Header = () => {
     'Cek Covid',
     'Tanya Dokter',
     'Booking Tes Covid',
-    'RsTerdekat',
+    'Rumah Sakit',
     'Login',
   ];
   return (

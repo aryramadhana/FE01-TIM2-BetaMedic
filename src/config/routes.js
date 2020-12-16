@@ -2,7 +2,7 @@ import { Home, RsTerdekat } from '../pages';
 
 const routes = [
   {
-    path: '/RsTerdekat',
+    path: '/Rumah Sakit',
     component: RsTerdekat,
     isPublic: true,
   },
