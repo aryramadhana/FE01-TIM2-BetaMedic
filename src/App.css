@@ -1,3 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla&display=swap');
+
+body {
+  font-family: 'Karla', sans-serif;
+}
+
 .App {
   text-align: center;
 }
@@ -25,7 +31,7 @@
 }
 
 .header {
-  background-color: blue;
+  background-color: #007bff;
 }
 
 .App-link {

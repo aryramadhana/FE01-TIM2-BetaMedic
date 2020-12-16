@@ -1,14 +1,36 @@
-import { Home, Login, Register } from '../pages';
+import {
+  Home,
+  BookingTesCovid,
+  RegistrasiBooking,
+  RsTerdekat,
+  Login,
+  Register,
+} from '../pages';
 
 const routes = [
+  {
+    path: '/Login',
+    component: Login,
+    isPublic: true,
+  },
   {
     path: '/register',
     component: Register,
     isPublic: true,
   },
   {
-    path: '/login',
-    component: Login,
+    path: '/Booking Tes Covid',
+    component: BookingTesCovid,
+    isPublic: true,
+  },
+  {
+    path: '/RegistrasiBooking',
+    component: RegistrasiBooking,
+    isPublic: true,
+  },
+  {
+    path: '/Rs Terdekat',
+    component: RsTerdekat,
     isPublic: true,
   },
   {
