@@ -5,6 +5,7 @@ import { Route, Switch, BrowserRouter, Redirect } from 'react-router-dom';
 import routes from './config/routes';
 import { HeaderNav } from './components';
 import { isUserAuthenticated } from './utils/cookie';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 const PrivateRoute = ({ component: Component, ...rest }) => {
   return (
