@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 /* eslint-disable eol-last */
+/* eslint-disable import/prefer-default-export */
 
 const Header = () => {
   const listMenu = [
@@ -8,7 +9,7 @@ const Header = () => {
     'Cek Covid',
     'Tanya Dokter',
     'Booking Tes Covid',
-    'Rs Terdekat',
+    'RS Terdekat',
     'Login',
   ];
   return (
