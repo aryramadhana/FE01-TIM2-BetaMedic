@@ -4,7 +4,7 @@ import './style.css';
 
 const RsTerdekat = () => {
   return (
-    <div className="top-wrapper-rs">
+    <div className="page-rs">
       <h1>Daftar Rumah Sakit</h1>
       <p>Temukan rumah sakit terdekat untuk penangan lebih cepat</p>
       <TableRs />

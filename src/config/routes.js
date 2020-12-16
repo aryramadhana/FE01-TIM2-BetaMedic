@@ -29,7 +29,7 @@ const routes = [
     isPublic: true,
   },
   {
-    path: '/Rs Terdekat',
+    path: '/Rumah Sakit',
     component: RsTerdekat,
     isPublic: true,
   },
