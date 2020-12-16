@@ -29,6 +29,7 @@
   },
   "rules": {
     "react/prop-types": 0,
+    "jsx-a11y/label-has-associated-control": "off",
     "react/display-name": [0, { "ignoreTranspilerName": true }],
     "no-console": ["warn"],
     "max-len": ["warn", 120],

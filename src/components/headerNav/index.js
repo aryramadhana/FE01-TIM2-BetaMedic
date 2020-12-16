@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 /* eslint-disable eol-last */
+/* eslint-disable import/prefer-default-export */
 
 const Header = () => {
   const listMenu = [
