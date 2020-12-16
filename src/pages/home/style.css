@@ -1,0 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@800&display=swap');
+
+.page-home h1,
+.page-home h5 {
+  font-family: 'Karla', sans-serif !important;
+}
