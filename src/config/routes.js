@@ -5,6 +5,7 @@ import {
   RsTerdekat,
   Login,
   Register,
+  TanyaDokter,
 } from '../pages';
 
 const routes = [
@@ -16,6 +17,11 @@ const routes = [
   {
     path: '/register',
     component: Register,
+    isPublic: true,
+  },
+  {
+    path: '/Tanya Dokter',
+    component: TanyaDokter,
     isPublic: true,
   },
   {
