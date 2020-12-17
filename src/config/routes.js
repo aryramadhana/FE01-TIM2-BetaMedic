@@ -3,6 +3,7 @@ import {
   CekCovid,
   BookingTesCovid,
   RegistrasiBooking,
+  RiwayatBook,
   RsTerdekat,
   Login,
   Register,
@@ -35,7 +36,12 @@ const routes = [
     isPublic: true,
   },
   {
-    path: '/Rs Terdekat',
+    path: '/RiwayatBook',
+    component: RiwayatBook,
+    isPublic: true,
+  },
+  {
+    path: '/Rumah Sakit',
     component: RsTerdekat,
     isPublic: true,
   },
