@@ -1,5 +1,6 @@
 import {
   Home,
+  CekCovid,
   BookingTesCovid,
   RegistrasiBooking,
   RiwayatBook,
@@ -17,6 +18,11 @@ const routes = [
   {
     path: '/register',
     component: Register,
+    isPublic: true,
+  },
+  {
+    path: '/Cek Covid',
+    component: CekCovid,
     isPublic: true,
   },
   {
