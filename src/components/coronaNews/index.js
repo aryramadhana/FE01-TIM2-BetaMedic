@@ -13,8 +13,9 @@ import {
 const CoronaNews = () => {
   return (
     <MDBContainer>
+      <h1 style={{ textAlign: 'center' }}>Artikel</h1>
       <MDBRow className="mb-4">
-        <MDBCol sm="6">
+        <MDBCol sm="6" className="mb-4">
           <MDBCard>
             <MDBCardBody>
               <MDBCardTitle>Special title treatment</MDBCardTitle>
@@ -22,7 +23,7 @@ const CoronaNews = () => {
                 With supporting text below as a natural lead-in to additional
                 content.
               </MDBCardText>
-              <MDBBtn color="primary">go somewhere</MDBBtn>
+              <MDBBtn color="primary">Baca selengkapnya</MDBBtn>
             </MDBCardBody>
           </MDBCard>
         </MDBCol>
@@ -35,7 +36,7 @@ const CoronaNews = () => {
                 With supporting text below as a natural lead-in to additional
                 content.
               </MDBCardText>
-              <MDBBtn color="primary">go somewhere</MDBBtn>
+              <MDBBtn color="primary">Baca selengkapnya</MDBBtn>
             </MDBCardBody>
           </MDBCard>
         </MDBCol>
@@ -48,7 +49,7 @@ const CoronaNews = () => {
                 With supporting text below as a natural lead-in to additional
                 content.
               </MDBCardText>
-              <MDBBtn color="primary">go somewhere</MDBBtn>
+              <MDBBtn color="primary">Baca selengkapnya</MDBBtn>
             </MDBCardBody>
           </MDBCard>
         </MDBCol>
@@ -61,7 +62,7 @@ const CoronaNews = () => {
                 With supporting text below as a natural lead-in to additional
                 content.
               </MDBCardText>
-              <MDBBtn color="primary">go somewhere</MDBBtn>
+              <MDBBtn color="primary">Baca selengkapnya</MDBBtn>
             </MDBCardBody>
           </MDBCard>
         </MDBCol>
@@ -74,7 +75,7 @@ const CoronaNews = () => {
                 With supporting text below as a natural lead-in to additional
                 content.
               </MDBCardText>
-              <MDBBtn color="primary">go somewhere</MDBBtn>
+              <MDBBtn color="primary">Baca selengkapnya</MDBBtn>
             </MDBCardBody>
           </MDBCard>
         </MDBCol>
@@ -87,7 +88,7 @@ const CoronaNews = () => {
                 With supporting text below as a natural lead-in to additional
                 content.
               </MDBCardText>
-              <MDBBtn color="primary">go somewhere</MDBBtn>
+              <MDBBtn color="primary">Baca selengkapnya</MDBBtn>
             </MDBCardBody>
           </MDBCard>
         </MDBCol>
