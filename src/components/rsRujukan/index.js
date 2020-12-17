@@ -32,7 +32,7 @@ export default function Rsrujukan() {
         action: (
           <Link to="/RegistrasiBooking">
             <MDBBtn color="default" rounded size="sm">
-              Button
+              Book
             </MDBBtn>
           </Link>
         ),
@@ -41,36 +41,44 @@ export default function Rsrujukan() {
         name: 'RS BHAYANGKARA',
         price: '155.000',
         action: (
-          <MDBBtn color="default" rounded size="sm">
-            Button
-          </MDBBtn>
+          <Link to="/RegistrasiBooking">
+            <MDBBtn color="default" rounded size="sm">
+              Book
+            </MDBBtn>
+          </Link>
         ),
       },
       {
         name: 'RS PERTAMINA',
         price: '160.000',
         action: (
-          <MDBBtn color="default" rounded size="sm">
-            Button
-          </MDBBtn>
+          <Link to="/RegistrasiBooking">
+            <MDBBtn color="default" rounded size="sm">
+              Book
+            </MDBBtn>
+          </Link>
         ),
       },
       {
         name: 'RSU TARAKAN',
         price: '150.000',
         action: (
-          <MDBBtn color="default" rounded size="sm">
-            Button
-          </MDBBtn>
+          <Link to="/RegistrasiBooking">
+            <MDBBtn color="default" rounded size="sm">
+              Book
+            </MDBBtn>
+          </Link>
         ),
       },
       {
         name: 'GLOBAL AWAL BROS HOSPITAL',
         price: '165.000',
         action: (
-          <MDBBtn color="default" rounded size="sm">
-            Button
-          </MDBBtn>
+          <Link to="/RegistrasiBooking">
+            <MDBBtn color="default" rounded size="sm">
+              Book
+            </MDBBtn>
+          </Link>
         ),
       },
     ],
