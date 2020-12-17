@@ -38,7 +38,7 @@ const Login = () => {
                 <Link to="/register">Register</Link>
                 <br />
                 <div className="text-center mt-4">
-                  <MDBBtn color="blue" type="submit">
+                  <MDBBtn color="primary" type="submit">
                     Login
                   </MDBBtn>
                 </div>
