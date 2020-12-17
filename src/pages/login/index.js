@@ -4,6 +4,7 @@ import { MDBContainer, MDBRow, MDBCol } from 'mdbreact';
 import { setCookie } from '../../utils/cookie';
 import { authService } from '../../services';
 import './style.css';
+/* eslint-disable */
 /* eslint-disable eol-last */
 /* eslint-disable import/prefer-default-export */
 const Login = () => {
