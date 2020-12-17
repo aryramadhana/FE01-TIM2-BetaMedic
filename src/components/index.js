@@ -5,3 +5,4 @@ export { default as Rsrujukan } from './rsRujukan';
 export { default as Formregis } from './formRegis';
 export { default as Footer } from './footer';
 export { default as CoronaNews } from './coronaNews';
+export { default as Riwayattes } from './riwayatTes';
