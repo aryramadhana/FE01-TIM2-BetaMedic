@@ -2,6 +2,7 @@ import {
   Home,
   BookingTesCovid,
   RegistrasiBooking,
+  RiwayatBook,
   RsTerdekat,
   Login,
   Register,
@@ -26,6 +27,11 @@ const routes = [
   {
     path: '/RegistrasiBooking',
     component: RegistrasiBooking,
+    isPublic: true,
+  },
+  {
+    path: '/RiwayatBook',
+    component: RiwayatBook,
     isPublic: true,
   },
   {

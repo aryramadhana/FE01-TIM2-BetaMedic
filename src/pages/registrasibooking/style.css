@@ -1,0 +1,17 @@
+.page-registerform .card {
+  width: 75%;
+  /* align-items: center;
+  justify-content: center; */
+  margin: 0 auto;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  box-shadow: rgba(0, 0, 0, 0.1);
+}
+
+.page-registerform form {
+  /* align-items: center;
+  justify-content: center; */
+  margin: 0 auto;
+  width: 80%;
+  padding: 30px;
+}
