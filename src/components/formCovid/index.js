@@ -71,7 +71,7 @@ const FormCovid = () => {
             <input type="submit" value="Tidak" />
             <br />
             <div className="text-left mt-4">
-              <MDBBtn color="unique" type="submit">
+              <MDBBtn color="primary" type="submit">
                 submit
               </MDBBtn>
             </div>
