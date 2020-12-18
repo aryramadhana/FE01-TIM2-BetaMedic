@@ -1,11 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { isUserAuthenticated, getCookie } from '../../utils/cookie';
+import { isUserAuthenticated } from '../../utils/cookie';
 /* eslint-disable eol-last */
 /* eslint-disable import/prefer-default-export */
 
 const Header = () => {
-  const userId = getCookie('userData') ?? JSON.parse(getCookie('userData'));
+  // const userId = getCookie('userData') ?? JSON.parse(getCookie('userData'));
   const listMenu = [
     'Beranda',
     'Cek Covid',
@@ -14,6 +14,12 @@ const Header = () => {
     'Rumah Sakit',
     'Login',
   ];
+
+  function handleLogOut() {
+    localStorage.removeItem('token');
+    const link = '/Beranda';
+    window.location.assign(link);
+  }
   return (
     <div className="header">
       {listMenu.map((name) => {
@@ -23,9 +29,17 @@ const Header = () => {
           </Link>
         );
       })}
-      <p>{userId}</p>
-      {isUserAuthenticated() ? <span>logout</span> : <div />}
+      {isUserAuthenticated() ? (
+        <button type="button" onClick={handleLogOut}>
+          {' '}
+          logout
+          {' '}
+        </button>
+      ) : (
+        <div />
+      )}
     </div>
   );
 };
+
 export default Header;
