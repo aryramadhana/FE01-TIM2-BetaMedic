@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import {
   MDBCard,
   MDBCardBody,
@@ -9,89 +9,41 @@ import {
   MDBRow,
   MDBContainer,
 } from 'mdbreact';
+import axios from 'axios';
 
 const CoronaNews = () => {
+  const [news, setNews] = useState([]);
+
+  const getNewsData = () => {
+    const url = 'https://try-smart-hospital-be.herokuapp.com/news';
+    axios.get(url).then((response) => {
+      setNews(response.data.news_json.articles);
+    });
+  };
+
+  useEffect(() => {
+    getNewsData();
+  });
+
   return (
     <MDBContainer>
       <h1 style={{ textAlign: 'center' }}>Artikel</h1>
       <MDBRow className="mb-4">
-        <MDBCol sm="6" className="mb-4">
-          <MDBCard>
-            <MDBCardBody>
-              <MDBCardTitle>Special title treatment</MDBCardTitle>
-              <MDBCardText>
-                With supporting text below as a natural lead-in to additional
-                content.
-              </MDBCardText>
-              <MDBBtn color="primary">Baca selengkapnya</MDBBtn>
-            </MDBCardBody>
-          </MDBCard>
-        </MDBCol>
-
-        <MDBCol sm="6" className="mb-4">
-          <MDBCard>
-            <MDBCardBody>
-              <MDBCardTitle>Special title treatment</MDBCardTitle>
-              <MDBCardText>
-                With supporting text below as a natural lead-in to additional
-                content.
-              </MDBCardText>
-              <MDBBtn color="primary">Baca selengkapnya</MDBBtn>
-            </MDBCardBody>
-          </MDBCard>
-        </MDBCol>
-
-        <MDBCol sm="6" className="mb-4">
-          <MDBCard>
-            <MDBCardBody>
-              <MDBCardTitle>Special title treatment</MDBCardTitle>
-              <MDBCardText>
-                With supporting text below as a natural lead-in to additional
-                content.
-              </MDBCardText>
-              <MDBBtn color="primary">Baca selengkapnya</MDBBtn>
-            </MDBCardBody>
-          </MDBCard>
-        </MDBCol>
-
-        <MDBCol sm="6" className="mb-4">
-          <MDBCard>
-            <MDBCardBody>
-              <MDBCardTitle>Special title treatment</MDBCardTitle>
-              <MDBCardText>
-                With supporting text below as a natural lead-in to additional
-                content.
-              </MDBCardText>
-              <MDBBtn color="primary">Baca selengkapnya</MDBBtn>
-            </MDBCardBody>
-          </MDBCard>
-        </MDBCol>
-
-        <MDBCol sm="6" className="mb-4">
-          <MDBCard>
-            <MDBCardBody>
-              <MDBCardTitle>Special title treatment</MDBCardTitle>
-              <MDBCardText>
-                With supporting text below as a natural lead-in to additional
-                content.
-              </MDBCardText>
-              <MDBBtn color="primary">Baca selengkapnya</MDBBtn>
-            </MDBCardBody>
-          </MDBCard>
-        </MDBCol>
-
-        <MDBCol sm="6" className="mb-4">
-          <MDBCard>
-            <MDBCardBody>
-              <MDBCardTitle>Special title treatment</MDBCardTitle>
-              <MDBCardText>
-                With supporting text below as a natural lead-in to additional
-                content.
-              </MDBCardText>
-              <MDBBtn color="primary">Baca selengkapnya</MDBBtn>
-            </MDBCardBody>
-          </MDBCard>
-        </MDBCol>
+        {news.map((newsData) => {
+          return (
+            <MDBCol sm="6" className="mb-4">
+              <MDBCard>
+                <MDBCardBody>
+                  <MDBCardTitle>{newsData.title}</MDBCardTitle>
+                  <MDBCardText>{newsData.description}</MDBCardText>
+                  <a href={newsData.url}>
+                    <MDBBtn color="primary">Baca selengkapnya</MDBBtn>
+                  </a>
+                </MDBCardBody>
+              </MDBCard>
+            </MDBCol>
+          );
+        })}
       </MDBRow>
     </MDBContainer>
   );
