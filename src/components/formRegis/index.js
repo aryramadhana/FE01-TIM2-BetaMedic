@@ -9,10 +9,11 @@ import {
   MDBBtnGroup,
 } from 'mdbreact';
 import { Link } from 'react-router-dom';
+import './style.css';
 
 const Formregis = () => {
   return (
-    <MDBContainer>
+    <MDBContainer className="formregis">
       <MDBRow>
         <MDBCol md="12">
           <MDBCard>
@@ -60,7 +61,7 @@ const Formregis = () => {
               />
               <div className="text-center md=12 mb-4 mt-4">
                 <MDBBtnGroup>
-                  <MDBBtn color="default">submit</MDBBtn>
+                  <MDBBtn color="primary">submit</MDBBtn>
                   <Link to="/RiwayatBook">
                     <MDBBtn color="warning">riwayat</MDBBtn>
                   </Link>
