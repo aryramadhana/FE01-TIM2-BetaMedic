@@ -1,11 +1,12 @@
 /* eslint-disable no-unused-vars */
 /* eslint-disable max-len */
+/* eslint-disable no-underscore-dangle */
 import React, { useEffect, useState } from 'react';
 import { MDBDataTableV5 } from 'mdbreact';
 import axios from 'axios';
 
 export default function TableRs() {
-  const [rsData, setrsData] = useState({});
+  const [rsData, setrsData] = useState([]);
 
   const getRsData = () => {
     const url = 'https://try-smart-hospital-be.herokuapp.com/hospital/data';
@@ -18,7 +19,19 @@ export default function TableRs() {
     getRsData();
   });
 
-  const [datatable, setDatatable] = React.useState({
+  const rsDataReal = [];
+  rsData.forEach((rs) => {
+    return rsDataReal.push({
+      _id: rs._id,
+      name: rs.name,
+      address: rs.address,
+      region: rs.region,
+      phone: rs.phone,
+      province: rs.province,
+    });
+  });
+
+  const data = {
     columns: [
       {
         label: 'Nama',
@@ -52,28 +65,21 @@ export default function TableRs() {
         width: 150,
       },
     ],
-    rows: [
-      {
-        name: 'RS UMUM DAERAH  DR. ZAINOEL ABIDIN',
-        address: 'JL. TGK DAUD BEUREUEH, NO. 108 B. ACEH',
-        region: 'KOTA BANDA ACEH, ACEH',
-        phone: '(0651) 34565',
-        province: 'Aceh',
-      },
-    ],
-  });
+    rows: rsDataReal,
+  };
+
+  // const [datatable, setDatatable] = useState({
+
+  // });
 
   return (
     <>
-      {rsData.map((rs) => {
-        return rs.name;
-      })}
       <MDBDataTableV5
         hover
         entriesOptions={[5, 20, 25]}
         entries={5}
         pagesAmount={4}
-        data={datatable}
+        data={data}
         searchTop
         searchBottom={false}
       />
