@@ -76,7 +76,7 @@ const Login = () => {
                 <div className="text-center mt-4">
                   <input
                     type="submit"
-                    value="Submit"
+                    value="Login"
                     disabled={isLoginLoading}
                   />
                 </div>
