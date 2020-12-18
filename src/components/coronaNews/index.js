@@ -10,6 +10,7 @@ import {
   MDBContainer,
 } from 'mdbreact';
 import axios from 'axios';
+// import './style.css';
 
 const CoronaNews = () => {
   const [news, setNews] = useState([]);
@@ -26,7 +27,7 @@ const CoronaNews = () => {
   });
 
   return (
-    <MDBContainer>
+    <MDBContainer className="page-corona">
       <h1 style={{ textAlign: 'center' }}>Artikel</h1>
       <MDBRow className="mb-4">
         {news.map((newsData) => {

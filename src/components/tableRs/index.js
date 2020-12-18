@@ -68,9 +68,7 @@ export default function TableRs() {
     rows: rsDataReal,
   };
 
-  // const [datatable, setDatatable] = useState({
-
-  // });
+  const [datatable, setDatatable] = useState(data);
 
   return (
     <>
