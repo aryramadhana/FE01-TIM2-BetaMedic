@@ -1,8 +1,22 @@
-import React from 'react';
+/* eslint-disable react/jsx-one-expression-per-line */
+import React, { useEffect, useState } from 'react';
 import { MDBDataTableV5 } from 'mdbreact';
-// import { Link } from 'react-router-dom';
+import axios from 'axios';
 
 export default function Riwayattes() {
+  // eslint-disable-next-line no-unused-vars
+  const [riwayat, setRiwayat] = useState([]);
+  const getRiwayat = () => {
+    const url = 'https://try-smart-hospital-be.herokuapp.com/rapidtest';
+    axios.get(url).then((response) => {
+      setRiwayat(response.data);
+      console.log(response.data);
+    });
+  };
+
+  useEffect(() => {
+    getRiwayat();
+  });
   // eslint-disable-next-line no-unused-vars
   const [datatable, setDatatable] = React.useState({
     columns: [
@@ -33,7 +47,7 @@ export default function Riwayattes() {
     ],
     rows: [
       {
-        date: '19/12/2020',
+        date: <>{riwayat.bookingDate}</>,
         name: 'Sutrisno',
         nik: '000001',
         email: 'sutrisno123@email.com',
