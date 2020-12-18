@@ -31,9 +31,7 @@ const Header = () => {
       })}
       {isUserAuthenticated() ? (
         <button type="button" onClick={handleLogOut}>
-          {' '}
           logout
-          {' '}
         </button>
       ) : (
         <div />
