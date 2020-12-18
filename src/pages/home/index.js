@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { MDBJumbotron, MDBBtn, MDBCol, MDBCardTitle, MDBIcon } from 'mdbreact';
 import { CoronaNews } from '../../components';
 import './style.css';
@@ -13,10 +14,12 @@ const JumbotronPage = () => {
               Beta Medic
             </MDBCardTitle>
             <p className="mx-5 mb-5">We Are Here For Your Care</p>
-            <MDBBtn color="primary" className="mb-5 ml-5">
-              <MDBIcon icon="clone" className="mr-2" />
-              Daftar
-            </MDBBtn>
+            <Link to="/register">
+              <MDBBtn color="primary" className="mb-5 ml-5">
+                <MDBIcon icon="clone" className="mr-2" />
+                Pendaftaran Akun
+              </MDBBtn>
+            </Link>
           </MDBCol>
         </MDBCol>
       </MDBJumbotron>

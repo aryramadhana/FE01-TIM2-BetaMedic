@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { MDBContainer, MDBRow, MDBCol } from 'mdbreact';
+import { MDBContainer, MDBRow, MDBCol, MDBCard } from 'mdbreact';
 import { setCookie } from '../../utils/cookie';
 import { authService } from '../../services';
 import './style.css';
@@ -30,51 +30,62 @@ const Login = () => {
       });
   };
   return (
-    <MDBContainer>
-      <MDBRow>
-        <MDBCol md="4">
-          <form
-            onSubmit={(e) => {
-              e.preventDefault();
-              onSubmitLogin();
-            }}
-          >
-            <p className="h4 text-center mb-4">Login</p>
-            <label htmlFor="defaultFormLoginEmailEx" className="grey-text">
-              Email
-            </label>
-            <input
-              type="email"
-              id="defaultFormLoginEmailEx"
-              className="form-control"
-              value={email}
-              onChange={(e) => {
-                setEmail(e.target.value);
-              }}
-            />
-            <br />
-            <label htmlFor="defaultFormLoginPasswordEx" className="grey-text">
-              Password
-            </label>
-            <input
-              type="password"
-              id="defaultFormLoginPasswordEx"
-              className="form-control"
-              value={password}
-              onChange={(e) => {
-                setPassword(e.target.value);
-              }}
-            />
-            <br />
-            <Link to="/register">Register</Link>
-            <br />
-            <div className="text-center mt-4">
-              <input type="submit" value="Login" disabled={isLoginLoading} />
-            </div>
-          </form>
-        </MDBCol>
-      </MDBRow>
-    </MDBContainer>
+    <div className="page-login">
+      <MDBContainer>
+        <MDBRow>
+          <MDBCol md="4">
+            <MDBCard>
+              <form
+                onSubmit={(e) => {
+                  e.preventDefault();
+                  onSubmitLogin();
+                }}
+              >
+                <p className="h4 text-center mb-4">Login</p>
+                <label htmlFor="defaultFormLoginEmailEx" className="grey-text">
+                  Email
+                </label>
+                <input
+                  type="email"
+                  id="defaultFormLoginEmailEx"
+                  className="form-control"
+                  value={email}
+                  onChange={(e) => {
+                    setEmail(e.target.value);
+                  }}
+                />
+                <br />
+                <label
+                  htmlFor="defaultFormLoginPasswordEx"
+                  className="grey-text"
+                >
+                  Password
+                </label>
+                <input
+                  type="password"
+                  id="defaultFormLoginPasswordEx"
+                  className="form-control"
+                  value={password}
+                  onChange={(e) => {
+                    setPassword(e.target.value);
+                  }}
+                />
+                <br />
+                <Link to="/register">Register</Link>
+                <br />
+                <div className="text-center mt-4">
+                  <input
+                    type="submit"
+                    value="Login"
+                    disabled={isLoginLoading}
+                  />
+                </div>
+              </form>
+            </MDBCard>
+          </MDBCol>
+        </MDBRow>
+      </MDBContainer>
+    </div>
   );
 };
 
