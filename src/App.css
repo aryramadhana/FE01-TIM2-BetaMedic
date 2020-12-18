@@ -57,3 +57,7 @@ body {
   background-color: white;
   color: green;
 }
+
+.logout {
+  text-align: left;
+}

@@ -69,7 +69,7 @@ const Login = () => {
             <Link to="/register">Register</Link>
             <br />
             <div className="text-center mt-4">
-              <input type="submit" value="Submit" disabled={isLoginLoading} />
+              <input type="submit" value="Login" disabled={isLoginLoading} />
             </div>
           </form>
         </MDBCol>
