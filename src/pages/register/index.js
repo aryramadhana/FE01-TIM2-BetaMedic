@@ -1,9 +1,30 @@
 import React from 'react';
-import { MDBContainer, MDBRow, MDBCol, MDBBtn, MDBCard } from 'mdbreact';
-import './style.css';
+import { MDBContainer, MDBRow, MDBCol, MDBBtn } from 'mdbreact';
+import axios from 'axios';
+/* eslint-disable */
 /* eslint-disable eol-last */
 /* eslint-disable import/prefer-default-export */
 const Register = () => {
+  const [nama, setNama] = useState('');
+  const [tanggal_lahir, setTanggalLahir] = useState('');
+  const [email, setEmail] = useState('');
+  const [alamat, setAlamat] = useState('');
+  const [password, setPassword] = useState('');
+  const _register = () => {
+    axios
+      .post('https://try-smart-hospital-be.herokuapp.com/registrasi', {
+        nama,
+        tanggal_lahir,
+        email,
+        alamat,
+        password,
+      })
+      .then((res) => {
+        console.log(res);
+        console.log(res.data);
+      });
+  };
+
   return (
     <div className="page-register">
       <MDBContainer>
