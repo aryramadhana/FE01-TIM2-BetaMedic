@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { MDBContainer, MDBRow, MDBCol, MDBCard } from 'mdbreact';
+import { MDBContainer, MDBRow, MDBCol, MDBCard, MDBBtn } from 'mdbreact';
 import { setCookie } from '../../utils/cookie';
 import { authService } from '../../services';
 import './style.css';
@@ -74,11 +74,19 @@ const Login = () => {
                 <Link to="/register">Register</Link>
                 <br />
                 <div className="text-center mt-4">
-                  <input
+                  <MDBBtn
+                    color="primary"
                     type="submit"
                     value="Login"
                     disabled={isLoginLoading}
-                  />
+                  >
+                    Login
+                  </MDBBtn>
+                  {/* <input
+                    type="submit"
+                    value="Login"
+                    disabled={isLoginLoading}
+                  /> */}
                 </div>
               </form>
             </MDBCard>

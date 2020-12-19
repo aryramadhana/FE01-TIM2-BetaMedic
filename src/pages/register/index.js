@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { MDBContainer, MDBRow, MDBCol, MDBCard, MDBBtn } from 'mdbreact';
 import axios from 'axios';
+import './style.css';
 /* eslint-disable */
 /* eslint-disable eol-last */
 /* eslint-disable import/prefer-default-export */

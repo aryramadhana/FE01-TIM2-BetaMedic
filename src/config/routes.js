@@ -12,6 +12,11 @@ import {
 
 const routes = [
   {
+    path: '/Booking Tes Covid',
+    component: BookingTesCovid,
+    isPublic: true,
+  },
+  {
     path: '/Login',
     component: Login,
     isPublic: true,
@@ -29,11 +34,6 @@ const routes = [
   {
     path: '/Cek Covid',
     component: CekCovid,
-    isPublic: true,
-  },
-  {
-    path: '/Booking Tes Covid',
-    component: BookingTesCovid,
     isPublic: true,
   },
   {
