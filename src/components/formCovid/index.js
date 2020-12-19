@@ -1,6 +1,7 @@
 /* eslint-disable jsx-a11y/label-has-associated-control */
 import React from 'react';
 import { MDBContainer, MDBRow, MDBCol, MDBBtn, MDBCard } from 'mdbreact';
+import { Link } from 'react-router-dom';
 
 const FormCovid = () => {
   return (
@@ -83,13 +84,13 @@ const FormCovid = () => {
                 <input
                   type="radio"
                   className="custom-control-input"
-                  id="customControlValidation2"
-                  name="radio-stacked"
+                  id="customControlValidation6"
+                  name="radio-stacked3"
                   required
                 />
                 <label
                   className="custom-control-label"
-                  htmlFor="customControlValidation2"
+                  htmlFor="customControlValidation6"
                 >
                   YA
                 </label>
@@ -98,13 +99,13 @@ const FormCovid = () => {
                 <input
                   type="radio"
                   className="custom-control-input"
-                  id="customControlValidation3"
-                  name="radio-stacked"
+                  id="customControlValidation7"
+                  name="radio-stacked3"
                   required
                 />
                 <label
                   className="custom-control-label"
-                  htmlFor="customControlValidation3"
+                  htmlFor="customControlValidation7"
                 >
                   TIDAK
                 </label>
@@ -117,13 +118,13 @@ const FormCovid = () => {
                 <input
                   type="radio"
                   className="custom-control-input"
-                  id="customControlValidation2"
-                  name="radio-stacked"
+                  id="customControlValidation8"
+                  name="radio-stacked4"
                   required
                 />
                 <label
                   className="custom-control-label"
-                  htmlFor="customControlValidation2"
+                  htmlFor="customControlValidation8"
                 >
                   YA
                 </label>
@@ -132,13 +133,13 @@ const FormCovid = () => {
                 <input
                   type="radio"
                   className="custom-control-input"
-                  id="customControlValidation3"
-                  name="radio-stacked"
+                  id="customControlValidation9"
+                  name="radio-stacked4"
                   required
                 />
                 <label
                   className="custom-control-label"
-                  htmlFor="customControlValidation3"
+                  htmlFor="customControlValidation9"
                 >
                   TIDAK
                 </label>
@@ -149,13 +150,13 @@ const FormCovid = () => {
                 <input
                   type="radio"
                   className="custom-control-input"
-                  id="customControlValidation2"
-                  name="radio-stacked"
+                  id="customControlValidation10"
+                  name="radio-stacked5"
                   required
                 />
                 <label
                   className="custom-control-label"
-                  htmlFor="customControlValidation2"
+                  htmlFor="customControlValidation10"
                 >
                   YA
                 </label>
@@ -164,13 +165,13 @@ const FormCovid = () => {
                 <input
                   type="radio"
                   className="custom-control-input"
-                  id="customControlValidation3"
-                  name="radio-stacked"
+                  id="customControlValidation11"
+                  name="radio-stacked5"
                   required
                 />
                 <label
                   className="custom-control-label"
-                  htmlFor="customControlValidation3"
+                  htmlFor="customControlValidation11"
                 >
                   TIDAK
                 </label>
@@ -183,13 +184,13 @@ const FormCovid = () => {
                 <input
                   type="radio"
                   className="custom-control-input"
-                  id="customControlValidation2"
-                  name="radio-stacked"
+                  id="customControlValidation12"
+                  name="radio-stacked6"
                   required
                 />
                 <label
                   className="custom-control-label"
-                  htmlFor="customControlValidation2"
+                  htmlFor="customControlValidation12"
                 >
                   YA
                 </label>
@@ -198,22 +199,24 @@ const FormCovid = () => {
                 <input
                   type="radio"
                   className="custom-control-input"
-                  id="customControlValidation3"
-                  name="radio-stacked"
+                  id="customControlValidation13"
+                  name="radio-stacked6"
                   required
                 />
                 <label
                   className="custom-control-label"
-                  htmlFor="customControlValidation3"
+                  htmlFor="customControlValidation13"
                 >
                   TIDAK
                 </label>
               </div>
               <br />
               <div className="text-left mt-4">
-                <MDBBtn color="primary" type="submit">
-                  submit
-                </MDBBtn>
+                <Link to="/SkrinningSolution">
+                  <MDBBtn color="primary" type="submit">
+                    submit
+                  </MDBBtn>
+                </Link>
               </div>
             </form>
           </MDBCard>

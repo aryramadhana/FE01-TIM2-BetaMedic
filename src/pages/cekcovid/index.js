@@ -4,7 +4,7 @@ import './style.css';
 
 const CekCovid = () => {
   return (
-    <div className="page-cekcovid">
+    <div className="pages-cekcovid">
       <FormCovid />
     </div>
   );

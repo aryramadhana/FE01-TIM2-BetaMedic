@@ -1,0 +1,20 @@
+.pages-solution .card {
+  padding: 30px;
+  width: 70%;
+  margin: 0 auto;
+  margin-top: 50px;
+  box-shadow: rgba(0, 0, 0, 5);
+}
+
+.pages-solution p.text-lead {
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: larger;
+  color: red;
+}
+
+.pages-solution p {
+  text-align: justify;
+  font-weight: 500;
+}

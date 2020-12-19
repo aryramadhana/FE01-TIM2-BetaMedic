@@ -7,3 +7,4 @@ export { default as RsTerdekat } from './rsterdekat';
 export { default as RegistrasiBooking } from './registrasibooking';
 export { default as TanyaDokter } from './tanyaDokter';
 export { default as RiwayatBook } from './riwayatbook';
+export { default as SkrinningSolution } from './skrinningsolusi';
