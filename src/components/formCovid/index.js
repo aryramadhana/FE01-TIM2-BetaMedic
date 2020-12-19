@@ -9,7 +9,6 @@ const FormsPage = () => {
         <MDBCol md="12">
           <MDBCard>
             <form className="was-validated" noValidate>
-              <p className="h4 text-center mb-4">Skrinning Mandiri Covid-19</p>
               <label htmlFor="pertanyaan1">
                 Pernah kontak dengan pasien positif Covid-19 atau pernah
                 berkunjung kenegara/daerah endemis Covid-19 dalam 14 hari
