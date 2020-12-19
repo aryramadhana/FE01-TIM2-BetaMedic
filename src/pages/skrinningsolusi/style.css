@@ -1,9 +1,15 @@
+.pages-solution {
+  background-image: url('../../assets/images/bg-cekcovid.jpg');
+  background-size: cover;
+  background-attachment: fixed;
+}
+
 .pages-solution .card {
   padding: 30px;
   width: 70%;
   margin: 0 auto;
-  margin-top: 50px;
   box-shadow: rgba(0, 0, 0, 5);
+  border-radius: 10px;
 }
 
 .pages-solution p.text-lead {
@@ -14,7 +20,8 @@
   color: red;
 }
 
-.pages-solution p {
-  text-align: justify;
-  font-weight: 500;
+.pages-solution h1 {
+  font-size: 50px;
+  text-align: center;
+  margin: 20px;
 }

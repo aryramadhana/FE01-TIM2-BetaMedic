@@ -24,7 +24,8 @@ const TanyaDokter = () => {
   });
 
   return (
-    <div className="d-flex justify-content-center">
+    <div className="page-tanyadokter">
+      <h1>Tanya Dokter</h1>
       <MDBRow style={{ margin: 'auto' }}>
         {data.map((dokter) => {
           return (
