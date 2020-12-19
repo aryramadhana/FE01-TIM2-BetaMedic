@@ -29,7 +29,7 @@ const TanyaDokter = () => {
         {data.map((dokter) => {
           return (
             <MDBCol style={{ padding: '15px', display: 'flex' }}>
-              <MDBCard style={{ width: '23rem' }}>
+              <MDBCard style={{ width: '23rem', margin: '0 auto' }}>
                 <MDBCardBody>
                   <MDBCardTitle className="">
                     <p className="nama">{dokter.nama}</p>
