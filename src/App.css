@@ -55,7 +55,7 @@ body {
 
 .menu:hover {
   background-color: white;
-  color: green;
+  color: #007bff;
 }
 
 .logout {
