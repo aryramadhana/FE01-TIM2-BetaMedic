@@ -1,5 +1,6 @@
 import { MDBBtn } from 'mdbreact';
 import React from 'react';
+import { Cookies } from 'react-cookie';
 import { Link } from 'react-router-dom';
 import { isUserAuthenticated } from '../../utils/cookie';
 /* eslint-disable eol-last */
@@ -15,11 +16,11 @@ const Header = () => {
     'Rumah Sakit',
     'Login',
   ];
+  const link = '/Beranda';
 
   function handleLogOut() {
-    localStorage.removeItem('token');
-    const link = '/Beranda';
     window.location.assign(link);
+    Cookies.remove('token');
   }
   return (
     <div className="header">
