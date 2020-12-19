@@ -1,5 +1,6 @@
 import React from 'react';
 import { Riwayattes } from '../../components';
+// import { riwayatService } from '../../services';
 import './style.css';
 
 const RiwayatBook = () => {
