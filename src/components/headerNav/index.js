@@ -1,3 +1,4 @@
+import { MDBBtn } from 'mdbreact';
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { isUserAuthenticated } from '../../utils/cookie';
@@ -30,9 +31,12 @@ const Header = () => {
         );
       })}
       {isUserAuthenticated() ? (
-        <button type="button" onClick={handleLogOut}>
-          logout
-        </button>
+        // <button type="button" onClick={handleLogOut}>
+        //   logout
+        // </button>
+        <MDBBtn type="button" color="danger" onClick={handleLogOut}>
+          Logout
+        </MDBBtn>
       ) : (
         <div />
       )}
