@@ -1,6 +1,7 @@
 import {
   Home,
   CekCovid,
+  SkrinningSolution,
   BookingTesCovid,
   RegistrasiBooking,
   RiwayatBook,
@@ -34,6 +35,11 @@ const routes = [
   {
     path: '/Cek Covid',
     component: CekCovid,
+    isPublic: true,
+  },
+  {
+    path: '/SkrinningSolution',
+    component: SkrinningSolution,
     isPublic: true,
   },
   {
