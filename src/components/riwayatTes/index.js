@@ -10,7 +10,6 @@ export default function Riwayattes() {
     const url = 'https://try-smart-hospital-be.herokuapp.com/rapidtest';
     axios.get(url).then((response) => {
       setRiwayat(response.data);
-      console.log(response.data);
     });
   };
 
