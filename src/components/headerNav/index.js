@@ -1,13 +1,17 @@
-import { MDBBtn } from 'mdbreact';
-import React from 'react';
-import { Cookies } from 'react-cookie';
-import { Link } from 'react-router-dom';
-import { isUserAuthenticated } from '../../utils/cookie';
+/* eslint-disable no-unused-vars */
 /* eslint-disable eol-last */
 /* eslint-disable import/prefer-default-export */
+/* eslint-disable import/no-unresolved */
+import { MDBBtn } from 'mdbreact';
+import React from 'react';
+import { useCookies } from 'react-cookie';
+import { Link } from 'react-router-dom';
+import { isUserAuthenticated } from '../../utils/cookie';
 
 const Header = () => {
   // const userId = getCookie('userData') ?? JSON.parse(getCookie('userData'));
+  const [cookies, setCookie, removeCookie] = useCookies(['token']);
+
   const listMenu = [
     'Beranda',
     'Cek Covid',
@@ -20,7 +24,8 @@ const Header = () => {
 
   function handleLogOut() {
     window.location.assign(link);
-    Cookies.remove('token');
+    removeCookie('token');
+    // Cookies.remove('token');
   }
   return (
     <div className="header">
