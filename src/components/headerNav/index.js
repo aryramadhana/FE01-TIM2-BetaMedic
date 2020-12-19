@@ -34,7 +34,12 @@ const Header = () => {
         // <button type="button" onClick={handleLogOut}>
         //   logout
         // </button>
-        <MDBBtn type="button" color="danger" onClick={handleLogOut}>
+        <MDBBtn
+          type="button"
+          color="danger"
+          onClick={handleLogOut}
+          style={{ float: 'right', marginTop: '12px' }}
+        >
           Logout
         </MDBBtn>
       ) : (
