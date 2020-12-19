@@ -17,16 +17,28 @@ export default function Riwayattes() {
   useEffect(() => {
     getRiwayat();
   });
+
+  const riwayatReal = [];
+  riwayat.forEach((history) => {
+    return riwayatReal.push({
+      bookingDate: history.bookingDate,
+      // eslint-disable-next-line no-underscore-dangle
+      _id: history._id,
+      name: history.name,
+      nik: history.nik,
+      email: history.email,
+    });
+  });
   // eslint-disable-next-line no-unused-vars
-  const [datatable, setDatatable] = React.useState({
+  const data = {
     columns: [
       {
         label: 'Tanggal',
-        field: 'date',
+        field: 'bookingDate',
         width: 50,
         attributes: {
           'aria-controls': 'DataTable',
-          'aria-label': 'Date',
+          'aria-label': 'bookingDate',
         },
       },
       {
@@ -45,22 +57,7 @@ export default function Riwayattes() {
         width: 100,
       },
     ],
-    rows: [
-      {
-        date: <>{riwayat.bookingDate}</>,
-        name: 'Sutrisno',
-        nik: '000001',
-        email: 'sutrisno123@email.com',
-      },
-      {
-        date: '20/12/2020',
-        name: 'Sutarjo',
-        nik: '000002',
-        email: 'sutaro321@email.com',
-      },
-    ],
-  });
-  return (
-    <MDBDataTableV5 hover data={datatable} searchTop searchBottom={false} />
-  );
+    rows: riwayatReal,
+  };
+  return <MDBDataTableV5 hover data={data} searchTop searchBottom={false} />;
 }
