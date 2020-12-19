@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { MDBContainer, MDBRow, MDBCol, MDBBtn, MDBCard } from 'mdbreact';
+import { MDBContainer, MDBRow, MDBCol, MDBCard, MDBBtn } from 'mdbreact';
 import axios from 'axios';
 /* eslint-disable */
 /* eslint-disable eol-last */
@@ -12,7 +12,7 @@ const Register = () => {
   const [password, setPassword] = useState('');
   const _register = () => {
     axios
-      .post('https://try-smart-hospital-be.herokuapp.com/registrasi', {
+      .post('https://try-smart-hospital-be.herokuapp.com/register', {
         nama,
         tanggal_lahir,
         email,
@@ -20,7 +20,8 @@ const Register = () => {
         password,
       })
       .then((res) => {
-        console.log(res);
+        const link = '/Login';
+        window.location.assign(link);
         console.log(res.data);
       });
   };
@@ -31,20 +32,13 @@ const Register = () => {
         <MDBRow>
           <MDBCol md="4">
             <MDBCard>
-              <form>
+              <form
+                onSubmit={(e) => {
+                  e.preventDefault();
+                  _register();
+                }}
+              >
                 <p className="h4 text-center mb-4">Register</p>
-                <label
-                  htmlFor="defaultFormRegisterNameEx"
-                  className="grey-text"
-                >
-                  Username
-                </label>
-                <input
-                  type="text"
-                  id="defaultFormRegisterNameEx"
-                  className="form-control"
-                />
-                <br />
                 <label
                   htmlFor="defaultFormRegisterNameEx"
                   className="grey-text"
@@ -55,6 +49,10 @@ const Register = () => {
                   type="text"
                   id="defaultFormRegisterNameEx"
                   className="form-control"
+                  value={nama}
+                  onChange={(e) => {
+                    setNama(e.target.value);
+                  }}
                 />
                 <br />
                 <label
@@ -67,6 +65,10 @@ const Register = () => {
                   type="email"
                   id="defaultFormRegisterEmailEx"
                   className="form-control"
+                  value={email}
+                  onChange={(e) => {
+                    setEmail(e.target.value);
+                  }}
                 />
                 <br />
                 <label
@@ -79,19 +81,11 @@ const Register = () => {
                   type="password"
                   id="defaultFormRegisterPasswordEx"
                   className="form-control"
+                  value={password}
+                  onChange={(e) => {
+                    setPassword(e.target.value);
+                  }}
                 />
-                <br />
-                <label
-                  htmlFor="defaultFormRegisterPasswordEx"
-                  className="grey-text"
-                >
-                  Jenis Kelamin
-                </label>
-                <select className="form-control">
-                  <option>--</option>
-                  <option>Pria</option>
-                  <option>Wanita</option>
-                </select>
                 <br />
                 <label
                   htmlFor="defaultFormRegisterConfirmEx"
@@ -100,9 +94,13 @@ const Register = () => {
                   Tanggal Lahir
                 </label>
                 <input
-                  type="date"
+                  type="text"
                   id="defaultFormRegisterConfirmEx"
                   className="form-control"
+                  value={tanggal_lahir}
+                  onChange={(e) => {
+                    setTanggalLahir(e.target.value);
+                  }}
                 />
                 <br />
                 <label
@@ -111,12 +109,17 @@ const Register = () => {
                 >
                   Alamat
                 </label>
-                <textarea
-                  id="defaultFormRegisterPasswordEx"
+                <input
+                  type="text"
+                  id="defaultFormRegisterConfirmEx"
                   className="form-control"
+                  value={alamat}
+                  onChange={(e) => {
+                    setAlamat(e.target.value);
+                  }}
                 />
-                <div className="text-center mt-4">
-                  <MDBBtn color="primary" type="submit">
+                <div className="text-center mt-4" onClick={_register}>
+                  <MDBBtn color="blue" type="submit">
                     Register
                   </MDBBtn>
                 </div>
