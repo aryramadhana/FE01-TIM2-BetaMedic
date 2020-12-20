@@ -1,8 +1,32 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { MDBContainer, MDBRow, MDBCol, MDBBtn, MDBCard } from 'mdbreact';
 import { Link } from 'react-router-dom';
+import './style.css';
 
 const FormsPage = () => {
+  const [yes, setYes] = useState(0);
+  const [answerR, setAnswerR] = useState(0);
+
+  const answerYes = () => {
+    setYes(yes + 1);
+    setAnswerR(answerR + 1);
+  };
+
+  const answerNo = () => {
+    setAnswerR(answerR + 1);
+  };
+
+  let cekanswer = true;
+  let linkTo = '/Cek Covid';
+  if (answerR >= 6) {
+    cekanswer = false;
+    if (yes < 3) {
+      linkTo = '/SkrinningSolutionSave';
+    } else {
+      linkTo = '/SkrinningSolution';
+    }
+  }
+
   return (
     <MDBContainer>
       <MDBRow>
@@ -21,6 +45,7 @@ const FormsPage = () => {
                   id="customControlValidation2"
                   name="radio-stacked"
                   required
+                  onChange={answerYes}
                 />
                 <label
                   className="custom-control-label"
@@ -36,6 +61,7 @@ const FormsPage = () => {
                   id="customControlValidation3"
                   name="radio-stacked"
                   required
+                  onChange={answerNo}
                 />
                 <label
                   className="custom-control-label"
@@ -53,6 +79,7 @@ const FormsPage = () => {
                   id="customControlValidation4"
                   name="radio-stacked2"
                   required
+                  onChange={answerYes}
                 />
                 <label
                   className="custom-control-label"
@@ -68,6 +95,7 @@ const FormsPage = () => {
                   id="customControlValidation5"
                   name="radio-stacked2"
                   required
+                  onChange={answerNo}
                 />
                 <label
                   className="custom-control-label"
@@ -85,6 +113,7 @@ const FormsPage = () => {
                   id="customControlValidation6"
                   name="radio-stacked3"
                   required
+                  onChange={answerYes}
                 />
                 <label
                   className="custom-control-label"
@@ -100,6 +129,7 @@ const FormsPage = () => {
                   id="customControlValidation7"
                   name="radio-stacked3"
                   required
+                  onChange={answerNo}
                 />
                 <label
                   className="custom-control-label"
@@ -119,6 +149,7 @@ const FormsPage = () => {
                   id="customControlValidation8"
                   name="radio-stacked4"
                   required
+                  onChange={answerYes}
                 />
                 <label
                   className="custom-control-label"
@@ -134,6 +165,7 @@ const FormsPage = () => {
                   id="customControlValidation9"
                   name="radio-stacked4"
                   required
+                  onChange={answerNo}
                 />
                 <label
                   className="custom-control-label"
@@ -151,6 +183,7 @@ const FormsPage = () => {
                   id="customControlValidation10"
                   name="radio-stacked5"
                   required
+                  onChange={answerYes}
                 />
                 <label
                   className="custom-control-label"
@@ -166,6 +199,7 @@ const FormsPage = () => {
                   id="customControlValidation11"
                   name="radio-stacked5"
                   required
+                  onChange={answerNo}
                 />
                 <label
                   className="custom-control-label"
@@ -185,6 +219,7 @@ const FormsPage = () => {
                   id="customControlValidation12"
                   name="radio-stacked6"
                   required
+                  onChange={answerYes}
                 />
                 <label
                   className="custom-control-label"
@@ -200,6 +235,7 @@ const FormsPage = () => {
                   id="customControlValidation13"
                   name="radio-stacked6"
                   required
+                  onChange={answerNo}
                 />
                 <label
                   className="custom-control-label"
@@ -209,9 +245,10 @@ const FormsPage = () => {
                 </label>
               </div>
               <br />
+              <p style={{ color: 'red' }}>Semua pertanyaan wajib diisi!</p>
               <div className="text-left mt-4">
-                <Link to="/SkrinningSolution">
-                  <MDBBtn color="primary" type="submit">
+                <Link to={linkTo}>
+                  <MDBBtn color="primary" type="submit" disabled={cekanswer}>
                     submit
                   </MDBBtn>
                 </Link>
