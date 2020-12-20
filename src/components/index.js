@@ -9,3 +9,4 @@ export { default as Covid } from './covid';
 export { default as CoronaNews } from './coronaNews';
 export { default as Riwayattes } from './riwayatTes';
 export { default as Solusicovid } from './solusiCovid';
+export { default as SolusicovidSave } from './solusiCovidSave';

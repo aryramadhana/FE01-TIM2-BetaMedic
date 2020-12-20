@@ -32,7 +32,7 @@ const CoronaNews = () => {
       <MDBRow className="mb-4">
         {news.map((newsData) => {
           return (
-            <MDBCol sm="6" className="mb-4">
+            <MDBCol sm="6" className="mb-4" key={newsData.url}>
               <MDBCard>
                 <MDBCardBody>
                   <MDBCardTitle>{newsData.title}</MDBCardTitle>
