@@ -9,6 +9,7 @@ import {
   Login,
   Register,
   TanyaDokter,
+  SkrinningSolutionSave,
 } from '../pages';
 
 const routes = [
@@ -40,6 +41,11 @@ const routes = [
   {
     path: '/SkrinningSolution',
     component: SkrinningSolution,
+    isPublic: true,
+  },
+  {
+    path: '/SkrinningSolutionSave',
+    component: SkrinningSolutionSave,
     isPublic: true,
   },
   {
