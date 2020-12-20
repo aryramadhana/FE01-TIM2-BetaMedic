@@ -15,7 +15,7 @@ const routes = [
   {
     path: '/Booking Tes Covid',
     component: BookingTesCovid,
-    isPublic: true,
+    isPublic: false,
   },
   {
     path: '/Login',
@@ -35,7 +35,7 @@ const routes = [
   {
     path: '/Cek Covid',
     component: CekCovid,
-    isPublic: true,
+    isPublic: false,
   },
   {
     path: '/SkrinningSolution',
