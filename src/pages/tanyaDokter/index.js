@@ -28,6 +28,7 @@ const TanyaDokter = () => {
       <h1>Tanya Dokter</h1>
       <MDBRow style={{ margin: 'auto' }}>
         {data.map((dokter) => {
+          const wa = `https://api.whatsapp.com/send?phone=${dokter.telp}&text=Betamedic`;
           return (
             <MDBCol style={{ padding: '15px', display: 'flex' }}>
               <MDBCard style={{ width: '23rem', margin: '0 auto' }}>
@@ -43,9 +44,11 @@ const TanyaDokter = () => {
                       {dokter.alamatPraktek}
                     </p>
                   </MDBCardText>
-                  <MDBBtn color="success" className="text-center">
-                    {dokter.telp}
-                  </MDBBtn>
+                  <a href={wa}>
+                    <MDBBtn color="success" className="text-center">
+                      Whatsapp
+                    </MDBBtn>
+                  </a>
                 </MDBCardBody>
               </MDBCard>
             </MDBCol>
