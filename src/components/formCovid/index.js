@@ -1,16 +1,14 @@
-/* eslint-disable jsx-a11y/label-has-associated-control */
 import React from 'react';
 import { MDBContainer, MDBRow, MDBCol, MDBBtn, MDBCard } from 'mdbreact';
 import { Link } from 'react-router-dom';
 
-const FormCovid = () => {
+const FormsPage = () => {
   return (
     <MDBContainer>
       <MDBRow>
         <MDBCol md="12">
           <MDBCard>
             <form className="was-validated" noValidate>
-              <p className="h4 text-center mb-4">Skrinning Mandiri Covid-19</p>
               <label htmlFor="pertanyaan1">
                 Pernah kontak dengan pasien positif Covid-19 atau pernah
                 berkunjung kenegara/daerah endemis Covid-19 dalam 14 hari
@@ -226,4 +224,4 @@ const FormCovid = () => {
   );
 };
 
-export default FormCovid;
+export default FormsPage;

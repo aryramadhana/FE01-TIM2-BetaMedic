@@ -5,9 +5,7 @@ import './style.css';
 const SkrinningSolution = () => {
   return (
     <div className="pages-solution">
-      <h2 className="text-center text-capitalize">
-        solusi yang dapat disarankan
-      </h2>
+      <h1>Solusi yang dapat disarankan</h1>
       <Solusicovid />
     </div>
   );
