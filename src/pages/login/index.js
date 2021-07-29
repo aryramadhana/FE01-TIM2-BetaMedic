@@ -83,11 +83,11 @@ const Login = () => {
                   >
                     Login
                   </MDBBtn>
-                  {/* <input
+                  <input
                     type="submit"
                     value="Login"
                     disabled={isLoginLoading}
-                  /> */}
+                  />
                 </div>
               </form>
             </MDBCard>
