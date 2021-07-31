@@ -21,6 +21,7 @@ const Formregis = () => {
   const [email, setEmail] = useState('');
   const _booking = () => {
     axios.post('https://try-smart-hospital-be.herokuapp.com/rapidtest', {
+      'Content-type': 'application/json',
       bookingDate,
       nama,
       nik,
