@@ -22,19 +22,15 @@ const Header = () => {
         Authorization: `Bearer` + localStorage.getItem('token'),
       },
     };
-    axios
-      .get('https://try-smart-hospital-be.herokuapp.com/users', config)
-      .axiosCreate.interceptors.response.use(
-        (response) => {
-          return response.data;
-        },
-        (error) => {
-          if (error.response.status === 401) {
-            window.location.replace('/');
-          }
-          return Promise.reject(error);
-        }
-      );
+    axios.get('https://try-smart-hospital-be.herokuapp.com/users', config).then(
+      (res) => {
+        console.log(res);
+        return true;
+      },
+      (err) => {
+        console.log(err);
+      }
+    );
   };
 
   const listMenu = [
