@@ -24,8 +24,9 @@ const Header = () => {
     };
     axios.get('https://try-smart-hospital-be.herokuapp.com/users', config).then(
       (res) => {
-        console.log(res);
-        return true;
+        console.log(res.data.token);
+        if (res.data('token')) return true;
+        return false;
       },
       (err) => {
         console.log(err);
