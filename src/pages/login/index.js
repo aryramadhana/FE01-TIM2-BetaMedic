@@ -31,10 +31,10 @@ const Login = () => {
       })
       .catch((err) => {
         console.log(err);
-      })
-      .finally(() => {
-        setLoginLoading(false);
       });
+    // .finally(() => {
+    //   setLoginLoading(false);
+    // });
   };
   return (
     <div className="page-login">
