@@ -23,7 +23,7 @@ const Login = () => {
       //   .login(email, password)
       .then((res) => {
         // console.log(res.data.token);
-        this.state({
+        this.Setstate({
           datam: res.data,
         });
         console.log(datam);
