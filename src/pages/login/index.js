@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
 import { MDBContainer, MDBRow, MDBCol, MDBCard, MDBBtn } from 'mdbreact';
-import { setCookie } from '../../utils/cookie';
+// import { setCookie } from '../../utils/cookie';
 // import { authService } from '../../services';
 import './style.css';
 /* eslint-disable eol-last */
@@ -22,12 +22,16 @@ const Login = () => {
       // authService
       //   .login(email, password)
       .then((res) => {
+        if (res.data.token) {
+          localStorage.setItem('token', JSON.stringify(res.data));
+        }
         console.log(res.data);
-        const cookieToken = res.data.token;
-        const cookieEmail = res.email.data.email;
-        setCookie('userData', JSON.stringify(cookieEmail), 10000);
-        setCookie('token', JSON.stringify(cookieToken), 10000);
-        window.location.assign('/Beranda');
+        // return res;
+        // const cookieToken = res.data.token;
+        // const cookieEmail = res.email.data.email;
+        // setCookie('userData', JSON.stringify(cookieEmail), 10000);
+        // setCookie('token', JSON.stringify(cookieToken), 10000);
+        // window.location.assign('/Beranda');
       })
       .catch((err) => {
         console.log(err);
