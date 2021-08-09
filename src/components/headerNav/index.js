@@ -19,7 +19,7 @@ const Header = () => {
         Authorization: 'Bearer' + localStorage.getItem('token'),
       },
     };
-    axios.get('https://try-smart-hospital-be.herokuapp.com/user', config).then(
+    axios.get('https://try-smart-hospital-be.herokuapp.com/users', config).then(
       (res) => {
         console.log(res);
       },
