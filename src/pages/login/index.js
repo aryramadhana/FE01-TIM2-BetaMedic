@@ -1,7 +1,7 @@
 /* eslint-disable */
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-// import axios from 'axios';
+import axios from 'axios';
 import { MDBContainer, MDBRow, MDBCol, MDBCard, MDBBtn } from 'mdbreact';
 // import { setCookie } from '../../utils/cookie';
 // import { authService } from '../../services';
