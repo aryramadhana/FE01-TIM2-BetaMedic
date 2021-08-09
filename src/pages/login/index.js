@@ -23,11 +23,8 @@ const Login = () => {
       // authService
       //   .login(email, password)
       .then((res) => {
+        return res;
         // console.log(res.data.token);
-        self.setstate({
-          datam: res.data,
-        });
-        console.log(datam);
         // const cookieEmail = res.email;
         // setCookie('userData', JSON.stringify(cookieEmail), 10000);
         // setCookie('token', JSON.stringify(cookieToken), 10000);
