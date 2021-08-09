@@ -5,13 +5,29 @@
 /* eslint-disable import/no-unresolved */
 import { MDBBtn } from 'mdbreact';
 import React from 'react';
-import { useCookies } from 'react-cookie';
+// import { useCookies } from 'react-cookie';
 import { Link } from 'react-router-dom';
-import { isUserAuthenticated } from '../../utils/cookie';
+import axios from 'axios';
+// import { isUserAuthenticated } from '../../utils/cookie';
 
 const Header = () => {
   // const userId = getCookie('userData') ?? JSON.parse(getCookie('userData'));
-  const [cookies, setCookie, removeCookie] = useCookies(['token']);
+  // const [cookies, setCookie, removeCookie] = useCookies(['token']);
+  const isUserAuthenticated = () => {
+    const config = {
+      headers: {
+        Authorization: 'Bearer' + localStorage.getItem('token'),
+      },
+    };
+    axios.get('https://api-betamedic.tokocode.com/api/user', config).then(
+      (res) => {
+        console.log(res);
+      },
+      (err) => {
+        console.log(err);
+      }
+    );
+  };
 
   const listMenu = [
     'Beranda',
