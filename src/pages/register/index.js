@@ -6,11 +6,11 @@ import './style.css';
 /* eslint-disable eol-last */
 /* eslint-disable import/prefer-default-export */
 const Register = () => {
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
   const [nama, setNama] = useState('');
   const [tgl_lahir, setTanggalLahir] = useState('');
-  const [email, setEmail] = useState('');
   const [alamat, setAlamat] = useState('');
-  const [password, setPassword] = useState('');
   const _register = () => {
     axios
       .post('https://api-betamedic.tokocode.com/api/register', {
@@ -41,22 +41,6 @@ const Register = () => {
               >
                 <p className="h4 text-center mb-4">Register</p>
                 <label
-                  htmlFor="defaultFormRegisterNameEx"
-                  className="grey-text"
-                >
-                  Nama
-                </label>
-                <input
-                  type="text"
-                  id="defaultFormRegisterNameEx"
-                  className="form-control"
-                  value={nama}
-                  onChange={(e) => {
-                    setNama(e.target.value);
-                  }}
-                />
-                <br />
-                <label
                   htmlFor="defaultFormRegisterEmailEx"
                   className="grey-text"
                 >
@@ -85,6 +69,22 @@ const Register = () => {
                   value={password}
                   onChange={(e) => {
                     setPassword(e.target.value);
+                  }}
+                />
+                <br />
+                <label
+                  htmlFor="defaultFormRegisterNameEx"
+                  className="grey-text"
+                >
+                  Nama
+                </label>
+                <input
+                  type="text"
+                  id="defaultFormRegisterNameEx"
+                  className="form-control"
+                  value={nama}
+                  onChange={(e) => {
+                    setNama(e.target.value);
                   }}
                 />
                 <br />
