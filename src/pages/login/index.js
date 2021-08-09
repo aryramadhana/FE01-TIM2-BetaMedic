@@ -29,7 +29,7 @@ const Login = () => {
         // const cookieEmail = res.email.data.email;
         // setCookie('userData', JSON.stringify(cookieEmail), 10000);
         // setCookie('token', JSON.stringify(cookieToken), 10000);
-        // window.location.assign('/Beranda');
+        window.location.assign('/Beranda');
       })
       .catch((err) => {
         console.log(err);
