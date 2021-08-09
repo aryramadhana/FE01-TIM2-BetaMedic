@@ -7,18 +7,18 @@ import './style.css';
 /* eslint-disable import/prefer-default-export */
 const Register = () => {
   const [nama, setNama] = useState('');
-  const [tanggal_lahir, setTanggalLahir] = useState('');
+  const [tgl_lahir, setTanggalLahir] = useState('');
   const [email, setEmail] = useState('');
   const [alamat, setAlamat] = useState('');
   const [password, setPassword] = useState('');
   const _register = () => {
     axios
-      .post('https://try-smart-hospital-be.herokuapp.com/register', {
-        nama,
-        tanggal_lahir,
+      .post('https://api-betamedic.tokocode.com/api/register', {
         email,
-        alamat,
         password,
+        nama,
+        tgl_lahir,
+        alamat,
       })
       .then((res) => {
         const link = '/Login';
@@ -98,7 +98,7 @@ const Register = () => {
                   type="text"
                   id="defaultFormRegisterConfirmEx"
                   className="form-control"
-                  value={tanggal_lahir}
+                  value={tgl_lahir}
                   onChange={(e) => {
                     setTanggalLahir(e.target.value);
                   }}
