@@ -23,7 +23,9 @@ const Login = () => {
       //   .login(email, password)
       .then((res) => {
         // console.log(res.data.token);
-        this.state({ datam: response.data });
+        this.state({
+          datam: res.data,
+        });
         console.log(datam);
         // const cookieEmail = res.email;
         // setCookie('userData', JSON.stringify(cookieEmail), 10000);
