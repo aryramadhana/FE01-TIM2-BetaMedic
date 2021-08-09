@@ -16,15 +16,15 @@ const Login = () => {
     setLoginLoading(true);
     var self = this;
     axios
-      .post('https://try-smart-hospital-be.herokuapp.com/login', {
+      .post('https://api-betamedic.tokocode.com/api/login', {
         email,
         password,
       })
       // authService
       //   .login(email, password)
       .then((res) => {
+        console.log(res.data.token);
         return res;
-        // console.log(res.data.token);
         // const cookieEmail = res.email;
         // setCookie('userData', JSON.stringify(cookieEmail), 10000);
         // setCookie('token', JSON.stringify(cookieToken), 10000);
