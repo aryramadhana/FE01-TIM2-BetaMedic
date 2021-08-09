@@ -24,7 +24,7 @@ const Login = () => {
       //   .login(email, password)
       .then((res) => {
         // console.log(res.data.token);
-        self.Setstate({
+        self.setstate({
           datam: res.data,
         });
         console.log(datam);
