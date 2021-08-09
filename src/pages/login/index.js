@@ -12,9 +12,9 @@ const Login = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [isLoginLoading, setLoginLoading] = useState(false);
-  var self = this;
   const onSubmitLogin = () => {
     setLoginLoading(true);
+    var self = this;
     axios
       .post('https://try-smart-hospital-be.herokuapp.com/login', {
         email,
