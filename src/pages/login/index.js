@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
 import { MDBContainer, MDBRow, MDBCol, MDBCard, MDBBtn } from 'mdbreact';
-// import { setCookie } from '../../utils/cookie';
+import { setCookie } from '../../utils/cookie';
 // import { authService } from '../../services';
 import './style.css';
 /* eslint-disable eol-last */
@@ -14,7 +14,6 @@ const Login = () => {
   const [isLoginLoading, setLoginLoading] = useState(false);
   const onSubmitLogin = () => {
     setLoginLoading(true);
-    var self = this;
     axios
       .post('https://api-betamedic.tokocode.com/api/login', {
         email,
