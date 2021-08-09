@@ -22,8 +22,9 @@ const Login = () => {
       // authService
       //   .login(email, password)
       .then((res) => {
-        console.log(res.data);
-        // const cookieToken = res.token;
+        // console.log(res.data);
+        const cookieToken = res.token;
+        console.log(cookieToken);
         // const cookieEmail = res.email;
         // setCookie('userData', JSON.stringify(cookieEmail), 10000);
         // setCookie('token', JSON.stringify(cookieToken), 10000);
