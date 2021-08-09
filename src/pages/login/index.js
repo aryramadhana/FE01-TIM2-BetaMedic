@@ -24,6 +24,9 @@ const Login = () => {
       //   .login(email, password)
       .then((res) => {
         console.log(res.token);
+        console.log(res.data.token);
+        console.log(res.email);
+        console.log(res.data.email);
         // return res;
         // const cookieEmail = res.email;
         // setCookie('userData', JSON.stringify(cookieEmail), 10000);
