@@ -12,6 +12,7 @@ const Login = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [isLoginLoading, setLoginLoading] = useState(false);
+  var self = this;
   const onSubmitLogin = () => {
     setLoginLoading(true);
     axios
@@ -23,7 +24,7 @@ const Login = () => {
       //   .login(email, password)
       .then((res) => {
         // console.log(res.data.token);
-        this.Setstate({
+        self.Setstate({
           datam: res.data,
         });
         console.log(datam);
