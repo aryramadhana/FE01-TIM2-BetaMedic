@@ -15,7 +15,7 @@ const Login = () => {
   const onSubmitLogin = () => {
     setLoginLoading(true);
     axios
-      .post('https://api-betamedic.tokocode.com/api/login', {
+      .post('https://try-smart-hospital-be.herokuapp.com/login', {
         email,
         password,
       })
