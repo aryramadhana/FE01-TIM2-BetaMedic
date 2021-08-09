@@ -3,8 +3,8 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 // import axios from 'axios';
 import { MDBContainer, MDBRow, MDBCol, MDBCard, MDBBtn } from 'mdbreact';
-import { setCookie } from '../../utils/cookie';
-import { authService } from '../../services';
+// import { setCookie } from '../../utils/cookie';
+// import { authService } from '../../services';
 import './style.css';
 /* eslint-disable eol-last */
 /* eslint-disable import/prefer-default-export */
@@ -14,20 +14,20 @@ const Login = () => {
   const [isLoginLoading, setLoginLoading] = useState(false);
   const onSubmitLogin = () => {
     setLoginLoading(true);
-    // axios
-    // .post('https://try-smart-hospital-be.herokuapp.com/login', {
-    //   email,
-    //   password
-    // })
-    authService
-      .login(email, password)
+    axios
+      .post('https://api-betamedic.tokocode.com/api/login', {
+        email,
+        password,
+      })
+      // authService
+      //   .login(email, password)
       .then((res) => {
-        console.log(res);
-        const cookieToken = res.token;
-        const cookieEmail = res.email;
-        setCookie('userData', JSON.stringify(cookieEmail), 10000);
-        setCookie('token', JSON.stringify(cookieToken), 10000);
-        window.location.assign('/Beranda');
+        console.log(res.data);
+        // const cookieToken = res.token;
+        // const cookieEmail = res.email;
+        // setCookie('userData', JSON.stringify(cookieEmail), 10000);
+        // setCookie('token', JSON.stringify(cookieToken), 10000);
+        // window.location.assign('/Beranda');
       })
       .catch((err) => {
         console.log(err);
