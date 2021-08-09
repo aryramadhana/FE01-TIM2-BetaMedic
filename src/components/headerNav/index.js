@@ -1,3 +1,4 @@
+/* eslint-disable */
 /* eslint-disable no-unused-vars */
 /* eslint-disable eol-last */
 /* eslint-disable import/prefer-default-export */
@@ -18,7 +19,6 @@ const Header = () => {
     'Tanya Dokter',
     'Booking Tes Covid',
     'Rumah Sakit',
-    'Login',
   ];
   const link = '/Beranda';
 
@@ -36,10 +36,8 @@ const Header = () => {
           </Link>
         );
       })}
+
       {isUserAuthenticated() ? (
-        // <button type="button" onClick={handleLogOut}>
-        //   logout
-        // </button>
         <MDBBtn
           type="button"
           color="danger"
@@ -49,7 +47,9 @@ const Header = () => {
           Logout
         </MDBBtn>
       ) : (
-        <div />
+        <Link to="/Login">
+          <div className="menu">Login</div>
+        </Link>
       )}
     </div>
   );

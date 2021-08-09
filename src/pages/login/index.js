@@ -1,10 +1,11 @@
+/* eslint-disable */
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+// import axios from 'axios';
 import { MDBContainer, MDBRow, MDBCol, MDBCard, MDBBtn } from 'mdbreact';
 import { setCookie } from '../../utils/cookie';
 import { authService } from '../../services';
 import './style.css';
-/* eslint-disable */
 /* eslint-disable eol-last */
 /* eslint-disable import/prefer-default-export */
 const Login = () => {
@@ -13,6 +14,11 @@ const Login = () => {
   const [isLoginLoading, setLoginLoading] = useState(false);
   const onSubmitLogin = () => {
     setLoginLoading(true);
+    // axios
+    // .post('https://try-smart-hospital-be.herokuapp.com/login', {
+    //   email,
+    //   password
+    // })
     authService
       .login(email, password)
       .then((res) => {
