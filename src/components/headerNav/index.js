@@ -16,7 +16,10 @@ const Header = () => {
   const isUserAuthenticated = () => {
     const config = {
       headers: {
-        Authorization: 'Bearer' + localStorage.getItem('token'),
+        Accept: 'application/json',
+        'Accept-Language': 'es',
+        'Content-Type': 'application/json',
+        Authorization: `Bearer` + localStorage.getItem('token'),
       },
     };
     axios.get('https://try-smart-hospital-be.herokuapp.com/users', config).then(
