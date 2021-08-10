@@ -20,8 +20,8 @@ const Login = () => {
         password,
       })
       .then((res) => {
+        console.log(res);
         localStorage.setItem('token', JSON.stringify.res.data);
-        console.log(res.data);
         // window.location.assign('/Beranda');
       })
       .catch((err) => {
