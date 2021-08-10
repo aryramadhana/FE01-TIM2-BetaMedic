@@ -11,8 +11,6 @@ import axios from 'axios';
 // import { isUserAuthenticated } from '../../utils/cookie';
 
 const Header = () => {
-  // const userId = getCookie('userData') ?? JSON.parse(getCookie('userData'));
-  // const [cookies, setCookie, removeCookie] = useCookies(['token']);
   const isUserAuthenticated = () => {
     const config = {
       headers: {
@@ -22,16 +20,16 @@ const Header = () => {
         Authorization: `Bearer` + localStorage.getItem('token'),
       },
     };
-    axios.get('https://try-smart-hospital-be.herokuapp.com/users', config).then(
-      (res) => {
-        console.log(res.data);
-        // if (res.JSON('token')) return true;
-        // return false;
-      },
-      (err) => {
-        console.log(err);
-      }
-    );
+    // axios.get('https://try-smart-hospital-be.herokuapp.com/users', config).then(
+    //   (res) => {
+    //     console.log(res.data);
+    //     // if (res.JSON('token')) return true;
+    //     // return false;
+    //   },
+    //   (err) => {
+    //     console.log(err);
+    //   }
+    // );
   };
 
   const listMenu = [
