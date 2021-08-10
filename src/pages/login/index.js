@@ -20,7 +20,7 @@ const Login = () => {
         password,
       })
       .then((res) => {
-        console.log(res);
+        console.log(res.data.token);
         localStorage.setItem('token', JSON.stringify.res.data);
         // window.location.assign('/Beranda');
       })
