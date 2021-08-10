@@ -21,7 +21,7 @@ const Login = () => {
       })
       .then((res) => {
         console.log(res.data.token);
-        localStorage.setItem('token', JSON.stringify.res.data);
+        localStorage.setItem('token', res.data.token);
         // window.location.assign('/Beranda');
       })
       .catch((err) => {
