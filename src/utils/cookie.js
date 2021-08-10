@@ -22,8 +22,11 @@ function setCookie(cname, cvalue, exdays) {
 }
 
 const isUserAuthenticated = () => {
-  if (getCookie('token')) return true;
-  return false;
+  const value = localStorage.getItem('token') || '';
+  if (value !== '') {
+    return true;
+  }
+    return false;
 };
 
 export { isUserAuthenticated, getCookie, setCookie };
