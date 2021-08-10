@@ -1,10 +1,15 @@
+/* eslint-disable */
 import React, { useEffect, useState } from 'react';
 import { FormCovid } from '../../components';
 import './style.css';
 
 const CekCovid = () => {
   const [isLoginLoading, setLoginLoading] = useState(false);
-
+  const cekToken = () => {
+    var token = localStorage.getItem('token');
+    console.log({ token });
+    setLoginLoading(localStorage.getItem);
+  };
   useEffect(() => {
     setLoginLoading(true);
   }, []);
