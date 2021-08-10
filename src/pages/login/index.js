@@ -15,21 +15,14 @@ const Login = () => {
   const onSubmitLogin = () => {
     setLoginLoading(true);
     axios
-      .post('https://try-smart-hospital-be.herokuapp.com/login', {
+      .post('https://api-betamedic.tokocode.com/api/login', {
         email,
         password,
       })
-      // authService
-      //   .login(email, password)
       .then((res) => {
         localStorage.setItem('token', res.data);
         console.log(res.data);
-        // return res;
-        // const cookieToken = res.data.token;
-        // const cookieEmail = res.email.data.email;
-        // setCookie('userData', JSON.stringify(cookieEmail), 10000);
-        // setCookie('token', JSON.stringify(cookieToken), 10000);
-        window.location.assign('/Beranda');
+        // window.location.assign('/Beranda');
       })
       .catch((err) => {
         console.log(err);
