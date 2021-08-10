@@ -20,9 +20,9 @@ const Login = () => {
         password,
       })
       .then((res) => {
-        localStorage.setItem('token', res.data);
+        localStorage.setItem('token', JSON.stringify.res.data);
         console.log(res.data);
-        window.location.assign('/Beranda');
+        // window.location.assign('/Beranda');
       })
       .catch((err) => {
         console.log(err);

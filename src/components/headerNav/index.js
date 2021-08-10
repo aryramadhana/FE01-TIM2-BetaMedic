@@ -7,7 +7,8 @@ import { MDBBtn } from 'mdbreact';
 import React from 'react';
 // import { useCookies } from 'react-cookie';
 import { Link } from 'react-router-dom';
-import axios from 'axios';
+// import axios from 'axios';
+import { Login } from '../../pages/login';
 // import { isUserAuthenticated } from '../../utils/cookie';
 
 const Header = () => {
