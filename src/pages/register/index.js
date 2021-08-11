@@ -49,6 +49,7 @@ const Register = () => {
                 <input
                   type="email"
                   id="defaultFormRegisterEmailEx"
+                  placeholder="example@example.com"
                   className="form-control"
                   value={email}
                   onChange={(e) => {
@@ -65,6 +66,7 @@ const Register = () => {
                 <input
                   type="password"
                   id="defaultFormRegisterPasswordEx"
+                  placeholder="min 8 character"
                   className="form-control"
                   value={password}
                   onChange={(e) => {
@@ -82,6 +84,7 @@ const Register = () => {
                   type="text"
                   id="defaultFormRegisterNameEx"
                   className="form-control"
+                  placeholder="Your Name"
                   value={nama}
                   onChange={(e) => {
                     setNama(e.target.value);
@@ -98,6 +101,7 @@ const Register = () => {
                   type="text"
                   id="defaultFormRegisterConfirmEx"
                   className="form-control"
+                  placeholder="Yy-Mm-Dd"
                   value={tgl_lahir}
                   onChange={(e) => {
                     setTanggalLahir(e.target.value);
@@ -114,6 +118,7 @@ const Register = () => {
                   type="text"
                   id="defaultFormRegisterConfirmEx"
                   className="form-control"
+                  placeholder="Alamat"
                   value={alamat}
                   onChange={(e) => {
                     setAlamat(e.target.value);
