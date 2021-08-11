@@ -1,5 +1,5 @@
 /* eslint-disable */
-import { MDBBtn } from 'mdbreact';
+import { MDBBtn, MDBLink } from 'mdbreact';
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { isUserAuthenticated } from '../../utils/cookie';
@@ -22,9 +22,9 @@ const Header = () => {
     <div className="header">
       {listMenu.map((name) => {
         return (
-          <Link to={`/${name}`} key={name} activeClassName="activeLink">
+          <MDBLink to={`/${name}`} key={name} activeClassName="activeLink">
             <div className="menu">{name}</div>
-          </Link>
+          </MDBLink>
         );
       })}
 

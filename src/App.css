@@ -62,10 +62,6 @@ body {
   color: #007bff;
 }
 
-.menu:active {
-  background-color: red;
-}
-
 .logout {
   text-align: left;
 }
