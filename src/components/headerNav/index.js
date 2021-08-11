@@ -9,8 +9,8 @@ const Header = () => {
   const listMenu = [
     'Beranda',
     'Cek Covid',
-    'Tanya Dokter',
     'Booking Tes Covid',
+    'Tanya Dokter',
     'Rumah Sakit',
   ];
   const link = '/Beranda';
