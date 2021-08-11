@@ -1,3 +1,4 @@
+/* eslint-disable */
 const isUserAuthenticated = () => {
   const value = localStorage.getItem('token') || '';
   if (value !== '') {
@@ -6,8 +7,8 @@ const isUserAuthenticated = () => {
   return false;
 };
 
-const handleLogOut = () => {
-  localStorage.removeItem('token');
-};
+// const handleLogOut = () => {
+//   localStorage.removeItem('token');
+// };
 
-export { isUserAuthenticated, handleLogOut };
+export { isUserAuthenticated };

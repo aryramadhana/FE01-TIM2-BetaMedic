@@ -9,7 +9,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 // import axios from 'axios';
 // import { Login } from '../../pages/login';
-import { isUserAuthenticated, handleLogOut } from '../../utils/cookie';
+import { isUserAuthenticated } from '../../utils/cookie';
 
 const Header = () => {
   //   // const isUserAuthenticated = () => {
@@ -42,11 +42,12 @@ const Header = () => {
   ];
   const link = '/Beranda';
 
-  // function handleLogOut() {
-  //   window.location.assign(link);
-  //   removeCookie('token');
-  //   // Cookies.remove('token');
-  // }
+  function handleLogOut() {
+    localStorage.removeItem('token');
+    window.location.assign(link);
+    // removeCookie('token');
+    // Cookies.remove('token');
+  }
   return (
     <div className="header">
       {listMenu.map((name) => {
