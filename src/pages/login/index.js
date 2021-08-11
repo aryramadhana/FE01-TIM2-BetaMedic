@@ -22,7 +22,7 @@ const Login = () => {
       .then((res) => {
         console.log(res.data.token);
         localStorage.setItem('token', res.data.token);
-        window.location.reload('');
+        window.location.reload('/Beranda');
         // window.location.assign('/Beranda');
       })
       .catch((err) => {
