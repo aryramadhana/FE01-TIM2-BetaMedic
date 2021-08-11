@@ -2,6 +2,7 @@
 import { MDBBtn } from 'mdbreact';
 import React from 'react';
 import { Link } from 'react-router-dom';
+import './style.css';
 import { isUserAuthenticated } from '../../utils/cookie';
 
 const Header = () => {
