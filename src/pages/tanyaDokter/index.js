@@ -15,10 +15,9 @@ import './style.css';
 const TanyaDokter = () => {
   const [data, setData] = useState([]);
   const getDataDokter = () => {
-    const url = 'https://api-betamedic.tokocode.com/api/dokter';
-    axios.get(url).then((response) => {
-      console.log(response.data);
-      setData(response.data);
+    axios.get('https://api-betamedic.tokocode.com/api/dokter').then((res) => {
+      console.log(res.data);
+      setData(resp.data);
     });
   };
   useEffect(() => {
