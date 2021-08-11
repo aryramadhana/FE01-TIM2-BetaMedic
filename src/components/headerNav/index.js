@@ -8,30 +8,30 @@ import React from 'react';
 // import { useCookies } from 'react-cookie';
 import { Link } from 'react-router-dom';
 // import axios from 'axios';
-import { Login } from '../../pages/login';
-// import { isUserAuthenticated } from '../../utils/cookie';
+// import { Login } from '../../pages/login';
+import { isUserAuthenticated } from '../../utils/cookie';
 
 const Header = () => {
-  const isUserAuthenticated = () => {
-    const config = {
-      headers: {
-        Accept: 'application/json',
-        'Accept-Language': 'es',
-        'Content-Type': 'application/json',
-        Authorization: `Bearer` + localStorage.getItem('token'),
-      },
-    };
-    // axios.get('https://try-smart-hospital-be.herokuapp.com/users', config).then(
-    //   (res) => {
-    //     console.log(res.data);
-    //     // if (res.JSON('token')) return true;
-    //     // return false;
-    //   },
-    //   (err) => {
-    //     console.log(err);
-    //   }
-    // );
-  };
+  //   // const isUserAuthenticated = () => {
+  //   //   const config = {
+  //   //     headers: {
+  //   //       Accept: 'application/json',
+  //   //       'Accept-Language': 'es',
+  //   //       'Content-Type': 'application/json',
+  //   //       Authorization: `Bearer` + localStorage.getItem('token'),
+  //   //     },
+  //   //   };
+  //     // axios.get('https://try-smart-hospital-be.herokuapp.com/users', config).then(
+  //     //   (res) => {
+  //     //     console.log(res.data);
+  //     //     // if (res.JSON('token')) return true;
+  //     //     // return false;
+  //     //   },
+  //     //   (err) => {
+  //     //     console.log(err);
+  //     //   }
+  //     // );
+  //   };
 
   const listMenu = [
     'Beranda',
