@@ -3,16 +3,11 @@ import React, { useState, useHistory } from 'react';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
 import { MDBContainer, MDBRow, MDBCol, MDBCard, MDBBtn } from 'mdbreact';
-// import { setCookie } from '../../utils/cookie';
-// import { authService } from '../../services';
 import './style.css';
-/* eslint-disable eol-last */
-/* eslint-disable import/prefer-default-export */
 const Login = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [isLoginLoading, setLoginLoading] = useState(false);
-  // const history = useHistory();
   const onSubmitLogin = () => {
     setLoginLoading(true);
     axios
@@ -23,16 +18,11 @@ const Login = () => {
       .then((res) => {
         console.log(res.data.token);
         localStorage.setItem('token', res.data.token);
-        // history.push('/Beranda');
-        // window.location.reload('/Beranda');
         window.location.assign('/Beranda');
       })
       .catch((err) => {
         console.log(err);
       });
-    // .finally(() => {
-    //   setLoginLoading(false);
-    // });
   };
   return (
     <div className="page-login">
@@ -87,11 +77,6 @@ const Login = () => {
                   >
                     Login
                   </MDBBtn>
-                  {/* <input
-                    type="submit"
-                    value="Login"
-                    disabled={isLoginLoading}
-                  /> */}
                 </div>
               </form>
             </MDBCard>

@@ -7,8 +7,4 @@ const isUserAuthenticated = () => {
   return false;
 };
 
-// const handleLogOut = () => {
-//   localStorage.removeItem('token');
-// };
-
 export { isUserAuthenticated };
