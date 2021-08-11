@@ -1,5 +1,5 @@
 /* eslint-disable */
-import React, { useState } from 'react';
+import React, { useState, useHistory } from 'react';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
 import { MDBContainer, MDBRow, MDBCol, MDBCard, MDBBtn } from 'mdbreact';
@@ -12,6 +12,7 @@ const Login = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [isLoginLoading, setLoginLoading] = useState(false);
+  const history = useHistory();
   const onSubmitLogin = () => {
     setLoginLoading(true);
     axios
@@ -22,7 +23,8 @@ const Login = () => {
       .then((res) => {
         console.log(res.data.token);
         localStorage.setItem('token', res.data.token);
-        window.location.reload('/Beranda');
+        history.push('/Beranda');
+        // window.location.reload('/Beranda');
         // window.location.assign('/Beranda');
       })
       .catch((err) => {

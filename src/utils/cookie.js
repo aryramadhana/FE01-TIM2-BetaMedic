@@ -26,7 +26,7 @@ const isUserAuthenticated = () => {
   if (value !== '') {
     return true;
   }
-    return false;
+  return false;
 };
 
 export { isUserAuthenticated, getCookie, setCookie };
