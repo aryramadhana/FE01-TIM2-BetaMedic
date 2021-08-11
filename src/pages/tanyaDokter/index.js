@@ -17,7 +17,7 @@ const TanyaDokter = () => {
   const getDataDokter = () => {
     axios.get('https://api-betamedic.tokocode.com/api/dokter').then((res) => {
       console.log(res.data);
-      setData(resp.data);
+      setData(res.data);
     });
   };
   useEffect(() => {
