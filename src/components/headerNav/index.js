@@ -1,7 +1,7 @@
 /* eslint-disable */
 import { MDBBtn } from 'mdbreact';
 import React from 'react';
-import { NavLink } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { isUserAuthenticated } from '../../utils/cookie';
 
 const Header = () => {
@@ -22,9 +22,9 @@ const Header = () => {
     <div className="header">
       {listMenu.map((name) => {
         return (
-          <NavLink to={`/${name}`} key={name}>
+          <Link to={`/${name}`} key={name} activeClassName="activeLink">
             <div className="menu">{name}</div>
-          </NavLink>
+          </Link>
         );
       })}
 
