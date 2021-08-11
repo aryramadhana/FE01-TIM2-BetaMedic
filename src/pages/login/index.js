@@ -23,9 +23,9 @@ const Login = () => {
       .then((res) => {
         console.log(res.data.token);
         localStorage.setItem('token', res.data.token);
-        history.push('/Beranda');
+        // history.push('/Beranda');
         // window.location.reload('/Beranda');
-        // window.location.assign('/Beranda');
+        window.location.assign('/Beranda');
       })
       .catch((err) => {
         console.log(err);
