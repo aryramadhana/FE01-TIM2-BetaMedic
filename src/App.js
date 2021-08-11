@@ -17,6 +17,7 @@ const PrivateRoute = ({ component: Component, ...rest }) => {
         if (isUserAuthenticated()) {
           return <Component />;
         }
+        alert('Mohon Untuk Login Terlebih Dahulu');
         return <Redirect to="/login" />;
       }}
     />

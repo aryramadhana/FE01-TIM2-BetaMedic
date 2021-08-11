@@ -44,6 +44,7 @@ const Login = () => {
                   type="email"
                   id="defaultFormLoginEmailEx"
                   className="form-control"
+                  required
                   value={email}
                   onChange={(e) => {
                     setEmail(e.target.value);
@@ -60,6 +61,7 @@ const Login = () => {
                   type="password"
                   id="defaultFormLoginPasswordEx"
                   className="form-control"
+                  required
                   value={password}
                   onChange={(e) => {
                     setPassword(e.target.value);

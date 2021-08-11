@@ -51,6 +51,7 @@ const Register = () => {
                   id="defaultFormRegisterEmailEx"
                   placeholder="example@example.com"
                   className="form-control"
+                  required
                   value={email}
                   onChange={(e) => {
                     setEmail(e.target.value);
@@ -68,6 +69,7 @@ const Register = () => {
                   id="defaultFormRegisterPasswordEx"
                   placeholder="min 8 character"
                   className="form-control"
+                  required
                   value={password}
                   onChange={(e) => {
                     setPassword(e.target.value);
@@ -85,6 +87,7 @@ const Register = () => {
                   id="defaultFormRegisterNameEx"
                   className="form-control"
                   placeholder="Your Name"
+                  required
                   value={nama}
                   onChange={(e) => {
                     setNama(e.target.value);
@@ -102,6 +105,7 @@ const Register = () => {
                   id="defaultFormRegisterConfirmEx"
                   className="form-control"
                   placeholder="Yy-Mm-Dd"
+                  required
                   value={tgl_lahir}
                   onChange={(e) => {
                     setTanggalLahir(e.target.value);
@@ -119,13 +123,14 @@ const Register = () => {
                   id="defaultFormRegisterConfirmEx"
                   className="form-control"
                   placeholder="Alamat"
+                  required
                   value={alamat}
                   onChange={(e) => {
                     setAlamat(e.target.value);
                   }}
                 />
                 <div className="text-center mt-4" onClick={_register}>
-                  <MDBBtn color="blue" type="submit">
+                  <MDBBtn color="primary" type="submit" className="button">
                     Register
                   </MDBBtn>
                 </div>
