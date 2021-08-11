@@ -1,3 +1,4 @@
+/* eslint-disable */
 import React, { useEffect, useState } from 'react';
 import {
   MDBBtn,
@@ -14,8 +15,9 @@ import './style.css';
 const TanyaDokter = () => {
   const [data, setData] = useState([]);
   const getDataDokter = () => {
-    const url = 'https://try-smart-hospital-be.herokuapp.com/dokter';
+    const url = 'https://api-betamedic.tokocode.com/api/dokter';
     axios.get(url).then((response) => {
+      console.log(response.data);
       setData(response.data);
     });
   };

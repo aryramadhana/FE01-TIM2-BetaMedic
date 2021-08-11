@@ -4,7 +4,7 @@ import { FormCovid } from '../../components';
 import './style.css';
 
 const CekCovid = () => {
-  const [isLoginLoading, setLoginLoading] = useState(false);
+  const [isLoginLoading, setLoginLoading] = useState(true);
   const cekToken = () => {
     var token = localStorage.getItem('token');
     console.log({ token });
