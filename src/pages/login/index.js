@@ -12,7 +12,7 @@ const Login = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [isLoginLoading, setLoginLoading] = useState(false);
-  const history = useHistory();
+  // const history = useHistory();
   const onSubmitLogin = () => {
     setLoginLoading(true);
     axios
