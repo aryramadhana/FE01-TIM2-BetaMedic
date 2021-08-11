@@ -1,7 +1,7 @@
 /* eslint-disable */
 import { MDBBtn } from 'mdbreact';
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import './style.css';
 import { isUserAuthenticated } from '../../utils/cookie';
 
@@ -23,9 +23,14 @@ const Header = () => {
     <div className="header">
       {listMenu.map((name) => {
         return (
-          <Link to={`/${name}`} key={name} activeClassName="activeLink">
-            <div className="menu">{name}</div>
-          </Link>
+          <NavLink
+            to={`/${name}`}
+            key={name}
+            activeClassName="active"
+            className="menu"
+          >
+            <div>{name}</div>
+          </NavLink>
         );
       })}
 
@@ -39,9 +44,9 @@ const Header = () => {
           Logout
         </MDBBtn>
       ) : (
-        <Link to="/Login">
-          <div className="menu">Login</div>
-        </Link>
+        <NavLink to="/Login" activeClassName="active" className="menu">
+          <div>Login</div>
+        </NavLink>
       )}
     </div>
   );

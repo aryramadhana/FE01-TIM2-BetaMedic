@@ -43,17 +43,6 @@ body {
   }
 }
 
-.menu {
-  display: inline-block;
-  padding: 20px;
-  color: white;
-}
-
-.menu:hover {
-  background-color: white;
-  color: #007bff;
-}
-
 .logout {
   text-align: left;
 }
