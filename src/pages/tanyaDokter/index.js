@@ -1,6 +1,14 @@
 /* eslint-disable */
 import React, { useEffect, useState } from 'react';
-import { MDBRow } from 'mdbreact';
+import {
+  MDBBtn,
+  MDBCard,
+  MDBCardBody,
+  MDBCardTitle,
+  MDBCardText,
+  MDBCol,
+  MDBRow,
+} from 'mdbreact';
 import axios from 'axios';
 import './style.css';
 
@@ -25,27 +33,29 @@ const TanyaDokter = () => {
         {data.map((dokter) => {
           const wa = `https://api.whatsapp.com/send?phone=${dokter.no_hp}&text=Betamedic`;
           return (
-            <div className="wrapper">
-              <div className="cards_wrap">
-                <div className="card_item">
-                  <div className="card_inner">
-                    <div className="card_top">
-                      <img src={dokter.foto} />
-                    </div>
-                    <div className="card_bottom">
-                      <div className="card_category">{dokter.nama}</div>
-                      <div className="card_info">
-                        <p className="tittle">{dokter.tempat_praktek}</p>
-                        <p>{dokter.alamat_praktek}</p>
-                        <a href={wa}>
-                          <button>whatsapp</button>
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+            <MDBCol style={{ padding: '15px', display: 'flex' }}>
+              <MDBCard style={{ width: '23rem', margin: '0 auto' }}>
+                <MDBCardBody>
+                  <MDBCardTitle className="">
+                    <p></p>
+                    <p className="nama">{dokter.nama}</p>
+                  </MDBCardTitle>
+                  <MDBCardText>
+                    <p className="spesialis">{dokter.jenis_dokter}</p>
+                    <p className="alamat">
+                      {dokter.tempat_praktek}
+                      <br />
+                      {dokter.alamat_praktek}
+                    </p>
+                  </MDBCardText>
+                  <a href={wa}>
+                    <MDBBtn color="success" className="text-center">
+                      Whatsapp
+                    </MDBBtn>
+                  </a>
+                </MDBCardBody>
+              </MDBCard>
+            </MDBCol>
           );
         })}
       </MDBRow>
