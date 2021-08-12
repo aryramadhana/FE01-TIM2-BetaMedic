@@ -17,7 +17,7 @@ const TanyaDokter = () => {
   const getDataDokter = () => {
     axios.get('https://api-betamedic.tokocode.com/api/dokter').then((res) => {
       console.log(res.data.data);
-      setData(res);
+      setData(res.data.data);
     });
   };
   useEffect(() => {
@@ -29,7 +29,7 @@ const TanyaDokter = () => {
       <h1>Tanya Dokter</h1>
       <MDBRow style={{ margin: 'auto' }}>
         {data.map((dokter) => {
-          const wa = `https://api.whatsapp.com/send?phone=${dokter.telp}&text=Betamedic`;
+          const wa = `https://api.whatsapp.com/send?phone=${dokter.no_hp}&text=Betamedic`;
           return (
             <MDBCol style={{ padding: '15px', display: 'flex' }}>
               <MDBCard style={{ width: '23rem', margin: '0 auto' }}>
@@ -38,11 +38,11 @@ const TanyaDokter = () => {
                     <p className="nama">{dokter.nama}</p>
                   </MDBCardTitle>
                   <MDBCardText>
-                    <p className="spesialis">{dokter.jenisDokter}</p>
+                    <p className="spesialis">{dokter.jenis_dokter}</p>
                     <p className="alamat">
-                      {dokter.tempatPraktek}
+                      {dokter.tempat_praktek}
                       <br />
-                      {dokter.alamatPraktek}
+                      {dokter.alamat_praktek}
                     </p>
                   </MDBCardText>
                   <a href={wa}>
