@@ -8,6 +8,7 @@ import {
   MDBCardText,
   MDBCol,
   MDBRow,
+  MDBCardImage,
 } from 'mdbreact';
 import axios from 'axios';
 import './style.css';
@@ -37,7 +38,7 @@ const TanyaDokter = () => {
               <MDBCard style={{ width: '23rem', margin: '0 auto' }}>
                 <MDBCardBody>
                   <MDBCardTitle className="">
-                    <p></p>
+                    <MDBCardImage className="" src={dokter.foto}></MDBCardImage>
                     <p className="nama">{dokter.nama}</p>
                   </MDBCardTitle>
                   <MDBCardText>
