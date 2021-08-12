@@ -15,18 +15,21 @@ import './style.css';
 import axios from 'axios';
 
 const Formregis = () => {
-  const [bookingDate, setBookingDate] = useState('');
+  const [tanggalBooking, settanggalBooking] = useState('');
   const [nama, setNama] = useState('');
   const [nik, setNik] = useState('');
   const [email, setEmail] = useState('');
   const _booking = () => {
-    axios.post('https://try-smart-hospital-be.herokuapp.com/rapidtest', {
-      'Content-type': 'application/json',
-      bookingDate,
-      nama,
-      nik,
-      email,
-    });
+    axios
+      .post('https://api-betamedic.tokocode.com/api/booking', {
+        tanggalBooking,
+        nama,
+        nik,
+        email,
+      })
+      .then((res) => {
+        console.log(res.data);
+      });
   };
   return (
     <MDBContainer className="formregis">
