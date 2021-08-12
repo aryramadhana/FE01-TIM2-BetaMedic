@@ -67,12 +67,13 @@ img {
 .cards_wrap .card_bottom .card_category {
   text-transform: uppercase;
   text-align: center;
+  font-weight: bold;
 }
 
 .cards_wrap .card_bottom .card_info {
   padding: 15px;
   margin: 10px 0;
-  border: 1px dashed #0071bc;
+  border: 1px solid #0071bc;
 }
 
 .cards_wrap .card_bottom .card_info .title {
@@ -83,6 +84,12 @@ img {
 
 .cards_wrap .card_bottom .card_creator {
   text-align: center;
+}
+
+button {
+  border-radius: 10px;
+  background-color: rgb(12, 207, 12);
+  color: white;
 }
 
 @media (max-width: 1024px) {
