@@ -56,6 +56,8 @@ const TanyaDokter = () => {
                       <br />
                       {dokter.alamat_praktek}
                     </p>
+                  </MDBCardText>
+                  <MDBCardText className="justify-content-center">
                     <a href={wa} target="_blank">
                       <MDBBtn
                         color="success"
