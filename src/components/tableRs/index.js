@@ -11,8 +11,8 @@ export default function TableRs() {
   const getRsData = () => {
     const url = 'https://api-betamedic.tokocode.com/api/rumah-sakit';
     axios.get(url).then((response) => {
-      console.log(response);
-      setrsData(response.data);
+      console.log(response.data.data);
+      setrsData(response.data.data.data);
     });
   };
 
