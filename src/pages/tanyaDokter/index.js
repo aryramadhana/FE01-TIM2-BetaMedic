@@ -36,7 +36,7 @@ const TanyaDokter = () => {
                       <div className="card_category">{dokter.nama}</div>
                       <div className="card_info">
                         <p className="tittle">{dokter.tempat_praktek}</p>
-                        <p>{dokter.alamt_praktek}</p>
+                        <p>{dokter.alamat_praktek}</p>
                         <a href={wa}>
                           <button>whatsapp</button>
                         </a>
