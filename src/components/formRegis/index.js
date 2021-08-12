@@ -15,14 +15,14 @@ import './style.css';
 import axios from 'axios';
 
 const Formregis = () => {
-  const [tanggalBooking, settanggalBooking] = useState('');
+  const [tgl_booking, settgl_booking] = useState('');
   const [nama, setNama] = useState('');
   const [nik, setNik] = useState('');
   const [email, setEmail] = useState('');
   const _booking = () => {
     axios
       .post('https://api-betamedic.tokocode.com/api/booking', {
-        tanggalBooking,
+        tgl_booking,
         nama,
         nik,
         email,
@@ -54,7 +54,7 @@ const Formregis = () => {
                 className="form-control"
                 value={bookingDate}
                 onChange={(e) => {
-                  setBookingDate(e.target.value);
+                  settgl_booking(e.target.value);
                 }}
               />
               <br />
