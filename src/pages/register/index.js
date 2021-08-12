@@ -101,7 +101,7 @@ const Register = () => {
                   Tanggal Lahir
                 </label>
                 <input
-                  type="text"
+                  type="date"
                   id="defaultFormRegisterConfirmEx"
                   className="form-control"
                   placeholder="Yy-Mm-Dd"

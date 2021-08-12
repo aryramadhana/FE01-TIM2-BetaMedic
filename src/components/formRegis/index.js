@@ -104,9 +104,6 @@ const Formregis = () => {
                   <MDBBtn color="primary" onClick={_booking}>
                     submit
                   </MDBBtn>
-                  <Link to="/RiwayatBook">
-                    <MDBBtn color="warning">riwayat</MDBBtn>
-                  </Link>
                   <Link to="/Booking Tes Covid">
                     <MDBBtn color="danger">kembali</MDBBtn>
                   </Link>
