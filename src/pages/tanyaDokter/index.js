@@ -38,7 +38,7 @@ const TanyaDokter = () => {
               <MDBCard style={{ width: '15rem', margin: '0 auto' }}>
                 <MDBCardBody>
                   <MDBCardImage
-                    className=" h-75 d-inline-block "
+                    className=" h-15 d-inline-block img-thumbnail"
                     src={dokter.foto}
                     waves
                   />
