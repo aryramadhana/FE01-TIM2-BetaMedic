@@ -23,12 +23,12 @@ const TableRs = () => {
   const rsDataReal = [];
   rsData.forEach((rs) => {
     return rsDataReal.push({
-      _id: rs._id,
-      name: rs.name,
-      address: rs.address,
-      region: rs.region,
-      phone: rs.phone,
-      province: rs.province,
+      id: rs.id,
+      nama: rs.nama,
+      alamat: rs.alamat,
+      kota: rs.kota,
+      no_hp: rs.no_hp,
+      provisi: rs.provinsi,
     });
   });
 
@@ -45,23 +45,23 @@ const TableRs = () => {
       },
       {
         label: 'Alamat',
-        field: 'address',
+        field: 'alamat',
         width: 270,
       },
       {
         label: 'Kota',
-        field: 'region',
+        field: 'kota',
         width: 200,
       },
       {
         label: 'Telepon',
-        field: 'phone',
+        field: 'no_hp',
         sort: 'asc',
         width: 100,
       },
       {
         label: 'Provinsi',
-        field: 'province',
+        field: 'provinsi',
         sort: 'asc',
         width: 150,
       },
