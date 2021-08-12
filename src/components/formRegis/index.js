@@ -52,6 +52,7 @@ const Formregis = () => {
                 type="date"
                 id="defaultFormRegisterDateEx"
                 className="form-control"
+                required
                 value={tgl_booking}
                 onChange={(e) => {
                   settgl_booking(e.target.value);
@@ -65,6 +66,7 @@ const Formregis = () => {
                 type="name"
                 id="defaultFormRegisterEmailEx"
                 className="form-control"
+                required
                 value={nama}
                 onChange={(e) => {
                   setNama(e.target.value);
@@ -81,6 +83,7 @@ const Formregis = () => {
                 type="nik"
                 id="defaultFormRegisterConfirmEx"
                 className="form-control"
+                required
                 value={nik}
                 onChange={(e) => {
                   setNik(e.target.value);
@@ -94,6 +97,7 @@ const Formregis = () => {
                 type="email"
                 id="defaultFormRegisterPasswordEx"
                 className="form-control"
+                required
                 value={email}
                 onChange={(e) => {
                   setEmail(e.target.value);
