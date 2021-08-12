@@ -52,7 +52,7 @@ const Formregis = () => {
                 type="date"
                 id="defaultFormRegisterDateEx"
                 className="form-control"
-                value={bookingDate}
+                value={tgl_booking}
                 onChange={(e) => {
                   settgl_booking(e.target.value);
                 }}
