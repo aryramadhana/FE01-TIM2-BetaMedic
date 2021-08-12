@@ -37,11 +37,7 @@ const TanyaDokter = () => {
             <MDBCol style={{ padding: '10px', display: 'flex' }}>
               <MDBCard style={{ width: '15rem', margin: '0 auto' }}>
                 <MDBCardBody>
-                  <MDBCardImage
-                    className="img-thumbnail"
-                    src={dokter.foto}
-                    waves
-                  />
+                  <MDBCardImage className="img-thumbnail" src={dokter.foto} />
                   <MDBCardTitle className="">
                     <p className="nama">{dokter.nama}</p>
                   </MDBCardTitle>
