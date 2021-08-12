@@ -21,7 +21,7 @@ const TanyaDokter = () => {
     });
   };
   useEffect(() => {
-    getDataDokter([]);
+    getDataDokter();
   });
 
   return (
