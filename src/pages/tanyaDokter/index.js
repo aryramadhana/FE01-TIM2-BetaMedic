@@ -34,8 +34,8 @@ const TanyaDokter = () => {
         {data.map((dokter) => {
           const wa = `https://api.whatsapp.com/send?phone=${dokter.no_hp}&text=Betamedic`;
           return (
-            <MDBCol style={{ padding: '15px', display: 'flex' }}>
-              <MDBCard style={{ width: '23rem', margin: '0 auto' }}>
+            <MDBCol style={{ padding: '10px', display: 'flex' }}>
+              <MDBCard style={{ width: '20rem', margin: '0 auto' }}>
                 <MDBCardBody>
                   <MDBCardImage
                     className="img-thumbnail"
@@ -43,10 +43,6 @@ const TanyaDokter = () => {
                     waves
                   />
                   <MDBCardTitle className="">
-                    {/* <img
-                      className="rounded mx-auto d-block"
-                      src={dokter.foto}
-                    /> */}
                     <p className="nama">{dokter.nama}</p>
                   </MDBCardTitle>
                   <MDBCardText>
