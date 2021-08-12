@@ -37,6 +37,7 @@ const TanyaDokter = () => {
               <MDBCard style={{ width: '23rem', margin: '0 auto' }}>
                 <MDBCardBody>
                   <MDBCardTitle className="">
+                    <p>{dokter.foto}</p>
                     <p className="nama">{dokter.nama}</p>
                   </MDBCardTitle>
                   <MDBCardText>
