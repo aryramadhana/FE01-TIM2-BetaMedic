@@ -11,8 +11,8 @@ const TableRs = () => {
     await axios
       .get('https://api-betamedic.tokocode.com/api/rumah-sakit')
       .then((res) => {
-        console.log(res.data.data.data);
-        setrsData(response.data.data.data);
+        console.log(res.data.data.data.nama);
+        setrsData(res.data.data.data);
       });
   }
 
