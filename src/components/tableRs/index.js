@@ -1,4 +1,4 @@
-/* eslint-disable no-unused-vars */
+/* eslint-disable  */
 /* eslint-disable max-len */
 /* eslint-disable no-underscore-dangle */
 import React, { useEffect, useState } from 'react';
@@ -9,8 +9,9 @@ export default function TableRs() {
   const [rsData, setrsData] = useState([]);
 
   const getRsData = () => {
-    const url = 'https://try-smart-hospital-be.herokuapp.com/hospital/data';
+    const url = 'https://api-betamedic.tokocode.com/api/rumah-sakit';
     axios.get(url).then((response) => {
+      console.log(response);
       setrsData(response.data);
     });
   };
