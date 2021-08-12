@@ -20,8 +20,8 @@ const TanyaDokter = () => {
       setData(res.data.data);
     });
   };
-  useEffect(([]) => {
-    getDataDokter();
+  useEffect(() => {
+    getDataDokter([]);
   });
 
   return (
