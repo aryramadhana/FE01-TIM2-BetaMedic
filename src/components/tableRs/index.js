@@ -5,16 +5,16 @@ import React, { useEffect, useState } from 'react';
 import { MDBDataTableV5 } from 'mdbreact';
 import axios from 'axios';
 
-export default function TableRs() {
-  const [rsData, setrsData] = useState([]);
-  const getRsData = () => {
-    axios
+const TableRs = () => {
+  async function getRsData() {
+    const [rsData, setrsData] = useState([]);
+    await axios
       .get('https://api-betamedic.tokocode.com/api/rumah-sakit')
-      .then((response) => {
-        console.log(response.data.data);
+      .then((res) => {
+        console.log(res.data.data);
         setrsData(response.data.data.data);
       });
-  };
+  }
 
   useEffect(() => {
     getRsData();
@@ -86,4 +86,6 @@ export default function TableRs() {
       />
     </>
   );
-}
+};
+
+export default TableRs;
