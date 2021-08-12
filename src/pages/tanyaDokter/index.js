@@ -40,7 +40,7 @@ const TanyaDokter = () => {
                   <MDBCardImage
                     className="img-thumbnail"
                     src={dokter.foto}
-                    style={{ height: '149px', width: '198px' }}
+                    style={{ height: '149px', width: '246px' }}
                   />
                   <MDBCardTitle className="">
                     <p className="nama">{dokter.nama}</p>
