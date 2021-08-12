@@ -28,7 +28,7 @@ const TableRs = () => {
       alamat: rs.alamat,
       kota: rs.kota,
       no_hp: rs.no_hp,
-      provisi: rs.provinsi,
+      provinsi: rs.provinsi,
     });
   });
 
@@ -36,7 +36,7 @@ const TableRs = () => {
     columns: [
       {
         label: 'Nama',
-        field: 'name',
+        field: 'nama',
         width: 150,
         attributes: {
           'aria-controls': 'DataTable',
