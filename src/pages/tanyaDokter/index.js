@@ -24,7 +24,7 @@ const TanyaDokter = () => {
   }
   useEffect(() => {
     getDataDokter();
-  });
+  }, []);
 
   return (
     <div className="page-tanyadokter">
