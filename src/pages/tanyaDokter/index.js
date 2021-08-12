@@ -38,12 +38,10 @@ const TanyaDokter = () => {
               <MDBCard style={{ width: '23rem', margin: '0 auto' }}>
                 <MDBCardBody>
                   <MDBCardTitle className="">
-                    <MDBCardImage>
-                      <img
-                        className="rounded mx-auto d-block"
-                        src={dokter.foto}
-                      />
-                    </MDBCardImage>
+                    <img
+                      className="rounded mx-auto d-block"
+                      src={dokter.foto}
+                    />
                     <p className="nama">{dokter.nama}</p>
                   </MDBCardTitle>
                   <MDBCardText>
