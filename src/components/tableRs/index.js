@@ -6,12 +6,12 @@ import { MDBDataTableV5 } from 'mdbreact';
 import axios from 'axios';
 
 const TableRs = () => {
+  const [rsData, setrsData] = useState([]);
   async function getRsData() {
-    const [rsData, setrsData] = useState([]);
     await axios
       .get('https://api-betamedic.tokocode.com/api/rumah-sakit')
       .then((res) => {
-        console.log(res.data.data);
+        console.log(res);
         setrsData(response.data.data.data);
       });
   }
