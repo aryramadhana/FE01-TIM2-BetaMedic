@@ -11,15 +11,14 @@ const TableRs = () => {
     await axios
       .get('https://api-betamedic.tokocode.com/api/rumah-sakit')
       .then((res) => {
-        console.log(res.data.data.data.nama);
+        console.log(res.data.data.data);
         setrsData(res.data.data.data);
       });
   }
 
   useEffect(() => {
     getRsData();
-  }),
-    [];
+  }, []);
 
   const rsDataReal = [];
   rsData.forEach((rs) => {
