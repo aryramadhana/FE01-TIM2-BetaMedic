@@ -35,7 +35,9 @@ const TanyaDokter = () => {
           const wa = `https://api.whatsapp.com/send?phone=${dokter.no_hp}&text=Betamedic`;
           return (
             <MDBCol style={{ padding: '10px', display: 'flex' }}>
-              <MDBCard style={{ width: '20rem', margin: '0 auto' }}>
+              <MDBCard
+                style={{ width: '15rem', height: '15rem', margin: '0 auto' }}
+              >
                 <MDBCardBody>
                   <MDBCardImage
                     className="img-thumbnail"
