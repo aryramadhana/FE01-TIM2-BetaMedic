@@ -14,12 +14,14 @@ import './style.css';
 
 const TanyaDokter = () => {
   const [data, setData] = useState([]);
-  const getDataDokter = () => {
-    axios.get('https://api-betamedic.tokocode.com/api/dokter').then((res) => {
-      console.log(res);
-      setData(res.data.data.data);
-    });
-  };
+  async function getDataDokter() {
+    await axios
+      .get('https://api-betamedic.tokocode.com/api/dokter')
+      .then((res) => {
+        console.log(res);
+        setData(res.data.data.data);
+      });
+  }
   useEffect(() => {
     getDataDokter();
   });
