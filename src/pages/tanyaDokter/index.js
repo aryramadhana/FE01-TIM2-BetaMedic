@@ -20,7 +20,7 @@ const TanyaDokter = () => {
       setData(res.data.data);
     });
   };
-  useEffect(() => {
+  useEffect(([]) => {
     getDataDokter();
   });
 
