@@ -32,7 +32,7 @@ export default function Rsrujukan() {
         price: '150.000',
         action: (
           <Link to="/RegistrasiBooking">
-            <MDBBtn color="default" rounded size="sm">
+            <MDBBtn color="primary" rounded size="sm">
               Book
             </MDBBtn>
           </Link>
@@ -43,7 +43,7 @@ export default function Rsrujukan() {
         price: '155.000',
         action: (
           <Link to="/RegistrasiBooking">
-            <MDBBtn color="default" rounded size="sm">
+            <MDBBtn color="primary" rounded size="sm">
               Book
             </MDBBtn>
           </Link>
@@ -54,7 +54,7 @@ export default function Rsrujukan() {
         price: '160.000',
         action: (
           <Link to="/RegistrasiBooking">
-            <MDBBtn color="default" rounded size="sm">
+            <MDBBtn color="primary" rounded size="sm">
               Book
             </MDBBtn>
           </Link>
@@ -65,7 +65,7 @@ export default function Rsrujukan() {
         price: '150.000',
         action: (
           <Link to="/RegistrasiBooking">
-            <MDBBtn color="default" rounded size="sm">
+            <MDBBtn color="primary" rounded size="sm">
               Book
             </MDBBtn>
           </Link>
@@ -76,7 +76,7 @@ export default function Rsrujukan() {
         price: '165.000',
         action: (
           <Link to="/RegistrasiBooking">
-            <MDBBtn color="default" rounded size="sm">
+            <MDBBtn color="primary" rounded size="sm">
               Book
             </MDBBtn>
           </Link>
