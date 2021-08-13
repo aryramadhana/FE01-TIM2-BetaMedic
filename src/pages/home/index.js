@@ -9,7 +9,7 @@ import { isUserAuthenticated } from '../../utils/cookie';
 const JumbotronPage = () => {
   return (
     <div>
-      {isUserAuthenticated(false) ? (
+      {isUserAuthenticated() ? (
         <MDBJumbotron style={{ padding: 0 }} className="page-home">
           <MDBCol className="text-black text-left py-5 px-4">
             <MDBCol className="py-5">
