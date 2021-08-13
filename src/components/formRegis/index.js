@@ -28,6 +28,7 @@ const Formregis = () => {
         email,
       })
       .then((res) => {
+        window.location.assign('/HasilEmail');
         console.log(res.data);
       });
   };

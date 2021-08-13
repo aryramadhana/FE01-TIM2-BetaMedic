@@ -10,6 +10,7 @@ import {
   Register,
   TanyaDokter,
   SkrinningSolutionSave,
+  HasilEmail,
 } from '../pages';
 
 const routes = [
@@ -37,6 +38,11 @@ const routes = [
     path: '/Cek Covid',
     component: CekCovid,
     isPublic: false,
+  },
+  {
+    path: '/HasilEmail',
+    component: HasilEmail,
+    isPublic: true,
   },
   {
     path: '/SkrinningSolution',

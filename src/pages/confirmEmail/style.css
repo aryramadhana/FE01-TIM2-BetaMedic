@@ -1,0 +1,35 @@
+.pages-solution {
+  background-image: url('../../assets/images/bg-cekcovid.jpg');
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.pages-solution .card {
+  padding: 45px;
+  width: 100%;
+  margin: 0 auto;
+  box-shadow: rgba(0, 0, 0, 5);
+  border-radius: 10px;
+}
+
+.pages-solution p.text-lead {
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: larger;
+  color: #007bff;
+}
+
+.pages-solution p.text-img {
+  text-align: center;
+}
+
+img {
+  max-width: 15%;
+}
+
+.pages-solution h1 {
+  font-size: 50px;
+  text-align: center;
+  margin: 20px;
+}
