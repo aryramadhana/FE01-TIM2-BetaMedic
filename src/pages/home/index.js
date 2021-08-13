@@ -10,6 +10,8 @@ const JumbotronPage = () => {
   return (
     <div>
       {isUserAuthenticated() ? (
+        <p>selamat datang</p>
+      ) : (
         <MDBJumbotron style={{ padding: 0 }} className="page-home">
           <MDBCol className="text-black text-left py-5 px-4">
             <MDBCol className="py-5">
@@ -26,8 +28,6 @@ const JumbotronPage = () => {
             </MDBCol>
           </MDBCol>
         </MDBJumbotron>
-      ) : (
-        <p>selamat datang</p>
       )}
       <CoronaNews />
     </div>
