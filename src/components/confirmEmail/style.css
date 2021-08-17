@@ -1,0 +1,7 @@
+.btnwarna {
+  color: #FF8400;
+}
+
+.btnwarna:hover {
+  color: #007BFF;
+}

@@ -2,6 +2,7 @@
 import React from 'react';
 import { MDBContainer, MDBRow, MDBCol, MDBCard, MDBButton } from 'mdbreact';
 import logo from './logo2-192.png';
+import './style.css';
 
 const ConfirmEmail = () => {
   return (
@@ -17,9 +18,11 @@ const ConfirmEmail = () => {
               <p className="text-img">
                 Terimakasih dan Salam Sehat Dari Kami
                 <br />
-                <img src={logo} alt="" />
+                <img src={logo} alt="" className="img" />
               </p>
-              <a href="/RegistrasiBooking">kembali</a>
+              <a href="/RegistrasiBooking" className="btnwarna">
+                Kembali
+              </a>
             </form>
           </MDBCard>
         </MDBCol>

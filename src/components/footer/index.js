@@ -31,7 +31,9 @@ const Footer = () => {
         </MDBRow>
       </MDBContainer>
       <div className="footer-copyright text-center py-3">
-        <MDBContainer fluid>&copy; 2020 Copyright: Beta Medic DTI</MDBContainer>
+        <MDBContainer fluid>
+          <p className="warna">&copy; 2020 Copyright: Beta Medic DTI</p>
+        </MDBContainer>
       </div>
     </MDBFooter>
   );

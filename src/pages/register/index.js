@@ -133,6 +133,10 @@ const Register = () => {
                   <MDBBtn color="primary" type="submit" className="button">
                     Register
                   </MDBBtn>
+                  <br />
+                  <a href="/Login" className="btnwarna">
+                    Kembali
+                  </a>
                 </div>
               </form>
             </MDBCard>

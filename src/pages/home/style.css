@@ -1,6 +1,6 @@
-.page-home .text-black {
-  background-image: url('../../assets/images/bg-home.jpg');
-  background-size: cover;
+.page-home{
+  background-image: url('../../assets/images/bg-home.png');
+  background-size: cover; 
 }
 
 .page-home .h1-responsive {

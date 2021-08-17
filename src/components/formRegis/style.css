@@ -1,3 +1,11 @@
 .formregis .btn {
   border-radius: 0.25rem !important;
 }
+
+.btnwarna {
+  color: #007BFF;
+}
+
+.btnwarna:hover {
+  color: #FF8400;
+}

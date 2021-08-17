@@ -68,7 +68,9 @@ const Login = () => {
                   }}
                 />
                 <br />
-                <Link to="/register">Register</Link>
+                <Link to="/register" className="btnwarna">
+                  Register
+                </Link>
                 <br />
                 <div className="text-center mt-4">
                   <MDBBtn

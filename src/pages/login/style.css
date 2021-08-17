@@ -18,3 +18,12 @@
   width: 100%;
   padding: 30px;
 }
+
+.btnwarna {
+  color: #007bff;
+}
+
+.btnwarna:hover {
+  color: #FF8400;
+}
+

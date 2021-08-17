@@ -22,3 +22,11 @@
 .button {
   color: white;
 }
+
+.btnwarna {
+  color: #007bff;
+}
+
+.btnwarna:hover {
+  color: #FF8400;
+}
