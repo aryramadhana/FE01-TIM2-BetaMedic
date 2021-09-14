@@ -12,6 +12,7 @@ const Header = () => {
     'Booking Tes Covid',
     'Tanya Dokter',
     'Rumah Sakit',
+    'Video',
   ];
   const link = '/Beranda';
 

@@ -11,3 +11,4 @@ export { default as Riwayattes } from './riwayatTes';
 export { default as Solusicovid } from './solusiCovid';
 export { default as SolusicovidSave } from './solusiCovidSave';
 export { default as ConfirmEmail } from './confirmEmail';
+export { default as GVideo } from './video';

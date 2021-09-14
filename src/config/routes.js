@@ -11,6 +11,7 @@ import {
   TanyaDokter,
   SkrinningSolutionSave,
   HasilEmail,
+  GaleriVideo,
 } from '../pages';
 
 const routes = [
@@ -67,6 +68,11 @@ const routes = [
   {
     path: '/Rumah Sakit',
     component: RsTerdekat,
+    isPublic: true,
+  },
+  {
+    path: '/Video',
+    component: GaleriVideo,
     isPublic: true,
   },
   {

@@ -1,0 +1,10 @@
+.body {
+  display: block;
+}
+
+.judul-galeri {
+  font-size: 14pt;
+  margin-top: 10px;
+  color: #ff8400 !important;
+  font-weight: bold;
+}
